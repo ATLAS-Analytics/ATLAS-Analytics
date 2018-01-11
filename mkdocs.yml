@@ -1,6 +1,19 @@
 site_name: ATLAS Analytics
 pages:
     - Home: index.md
+    - Data sources: 
+        - 'Panda': 'data-sources/panda.md'
+        - 'FTS': 'data-sources/fts.md'
+        - 'PerfSONAR': 'data-sources/perfsonar.md'
+        - 'Benchmarks': 'data-sources/benchmarks.md'
+        - 'xAOD': 'data-sources/xaod.md'
+        - 'RTT': 'data-sources/rtt.md'
+    - Infrastructure:
+        - 'Computing': 'infrastructure/computing_nodes.md'
+        - 'AMQ': 'infrastructure/amq.md'
+        - 'Elasticsearch': 'infrastructure/elasticsearch.md'
+        - 'Hadoop': 'infrastructure/hadoop.md'
+        - 'Logstash': 'infrastructure/logstash.md'
     - User Guides:
         - 'Elasticsearch & Kibana': 'user-guide/es_and_kibana.md'
         - 'Hadoop': 'user-guide/hadoop.md'
@@ -8,8 +21,7 @@ pages:
         - 'Pig Latin': 'user-guide/pig.md'
         - 'Jupyter': 'user-guide/jupyter.md'
     - About: about.md
-repo_url: https://github.com/ATLAS-Analytics/ATLAS-Analytics.github.io
-# edit_uri: edit/master/
+repo_url: https://github.com/ATLAS-Analytics/ATLAS-Analytics
 site_author: Ilija Vukotic
 # google_analytics: ['UA-36723568-3', 'mkdocs.org']
 remote_branch: master

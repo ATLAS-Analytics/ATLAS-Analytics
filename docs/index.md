@@ -1,6 +1,12 @@
-# Welcome to MkDocs
+# Welcome to ATLAS Analytics documentation
 
-For full documentation visit [mkdocs.org](http://mkdocs.org).
+ATLAS Analytics consists of numerous databases and services running at several distributed computing clusters, managed by different groups.
+
+This documentation will try to provide one stop documentation to all our users.
+A brief overview of the system can be found  ...
+
+
+Please feel free to update directly in the GitHub repository. To get access or rebuild the site please contact Ilija Vukotic.
 
 ## Commands
 
