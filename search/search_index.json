@@ -16,22 +16,22 @@
             "title": "Quick links"
         },
         {
-            "location": "/data-sources/panda/",
-            "text": "PANDA\n\n\nJobs\n\n\nTasks",
-            "title": "Panda"
+            "location": "/data-sources/Distributed_processing/",
+            "text": "Distributed processing\n\n\nJobs\n\n\nTasks",
+            "title": "Distributed Processing"
         },
         {
-            "location": "/data-sources/panda/#panda",
+            "location": "/data-sources/Distributed_processing/#distributed-processing",
             "text": "",
-            "title": "PANDA"
+            "title": "Distributed processing"
         },
         {
-            "location": "/data-sources/panda/#jobs",
+            "location": "/data-sources/Distributed_processing/#jobs",
             "text": "",
             "title": "Jobs"
         },
         {
-            "location": "/data-sources/panda/#tasks",
+            "location": "/data-sources/Distributed_processing/#tasks",
             "text": "",
             "title": "Tasks"
         },
@@ -162,8 +162,38 @@
         },
         {
             "location": "/infrastructure/elasticsearch/",
+            "text": "Elasticsearch\n\n\nUChicago\n\n\nInfrastructure\n\n\n\n\n5 data nodes, 3 service nodes (3 masters, 2 kibana), 15 TB of SSDs. Will be expanded to:...\n\n\nbackup: each Sunday all data is incrementally backed up.\n\n\n\n\nKibana\n\n\n\n\nProduction\n\n\n\n\nProduction version\n is fully open but only for read access. Searches, visualization, dashboards can be created but can not be saved. To add something to it one has to create it first in the development and ask Ilija to copy it over to the production Kibana.\n\n\n\n\nDevelopment\n\nDevelopment version\n is read/write capable but sits behind a apache proxy, if you need a password ask Ilija Vukotic.\n\n\n\n\nIT-ES\n\n\nMonit",
+            "title": "Elasticsearch"
+        },
+        {
+            "location": "/infrastructure/elasticsearch/#elasticsearch",
             "text": "",
             "title": "Elasticsearch"
+        },
+        {
+            "location": "/infrastructure/elasticsearch/#uchicago",
+            "text": "",
+            "title": "UChicago"
+        },
+        {
+            "location": "/infrastructure/elasticsearch/#infrastructure",
+            "text": "5 data nodes, 3 service nodes (3 masters, 2 kibana), 15 TB of SSDs. Will be expanded to:...  backup: each Sunday all data is incrementally backed up.",
+            "title": "Infrastructure"
+        },
+        {
+            "location": "/infrastructure/elasticsearch/#kibana",
+            "text": "Production   Production version  is fully open but only for read access. Searches, visualization, dashboards can be created but can not be saved. To add something to it one has to create it first in the development and ask Ilija to copy it over to the production Kibana.   Development Development version  is read/write capable but sits behind a apache proxy, if you need a password ask Ilija Vukotic.",
+            "title": "Kibana"
+        },
+        {
+            "location": "/infrastructure/elasticsearch/#it-es",
+            "text": "",
+            "title": "IT-ES"
+        },
+        {
+            "location": "/infrastructure/elasticsearch/#monit",
+            "text": "",
+            "title": "Monit"
         },
         {
             "location": "/infrastructure/hadoop/",

@@ -62,7 +62,7 @@
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="../../data-sources/panda/">Panda</a>
+    <a href="../../data-sources/Distributed_processing/">Distributed Processing</a>
 </li>
                             
 <li >
@@ -168,11 +168,32 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#elasticsearch">Elasticsearch</a></li>
+            <li><a href="#uchicago">UChicago</a></li>
+            <li><a href="#it-es">IT-ES</a></li>
+            <li><a href="#monit">Monit</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h1 id="elasticsearch">Elasticsearch</h1>
+<h2 id="uchicago">UChicago</h2>
+<h3 id="infrastructure">Infrastructure</h3>
+<ul>
+<li>5 data nodes, 3 service nodes (3 masters, 2 kibana), 15 TB of SSDs. Will be expanded to:...</li>
+<li>backup: each Sunday all data is incrementally backed up.</li>
+</ul>
+<h3 id="kibana">Kibana</h3>
+<ul>
+<li>Production</li>
+</ul>
+<p><a href="../atlas-kibana.mwt2.org">Production version</a> is fully open but only for read access. Searches, visualization, dashboards can be created but can not be saved. To add something to it one has to create it first in the development and ask Ilija to copy it over to the production Kibana.</p>
+<ul>
+<li>Development
+<a href="../atlas-kibana-dev.mwt2.org">Development version</a> is read/write capable but sits behind a apache proxy, if you need a password ask Ilija Vukotic.</li>
+</ul>
+<h2 id="it-es">IT-ES</h2>
+<h2 id="monit">Monit</h2></div>
         </div>
 
         <footer class="col-md-12">
