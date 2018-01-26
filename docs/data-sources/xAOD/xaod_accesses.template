@@ -1,0 +1,27 @@
+POST /_template/xaod_accesses
+{
+  "template" : "xaod_accesses*",
+  "settings": {
+    "index": {
+      "mapping.single_type": true,
+      "number_of_shards": "5",
+      "number_of_replicas": "0"
+    }
+  },
+  "aliases": {
+    "xaod_accesses": {}
+  },
+  "mappings": {
+    "doc": {
+      "properties": {
+    	"type": {"type": "keyword" },
+        "FileType": {"type": "keyword" },
+        "Grid": { "type": "integer" },
+        "name":  {"type": "keyword" },
+         "jobs":  { "type": "integer" },
+         "nJobs": { "type": "integer" },
+         "timestamp": { "type": "date", "format": "epoch_millis"}
+      }
+    }
+  }
+}

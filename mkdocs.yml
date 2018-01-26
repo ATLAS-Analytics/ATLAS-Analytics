@@ -24,4 +24,4 @@ pages:
 repo_url: https://github.com/ATLAS-Analytics/ATLAS-Analytics
 site_author: Ilija Vukotic
 google_analytics: ['UA-3194765-3', 'ATLAS-Analytics']
-remote_branch: master
+# remote_branch: master
