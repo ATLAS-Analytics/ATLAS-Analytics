@@ -1,1 +1,0 @@
-# ES and Kibana
