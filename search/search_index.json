@@ -72,7 +72,7 @@
         },
         {
             "location": "/data-sources/perfsonar/",
-            "text": "PerfSONAR\n\n\nData collection\n\n\nPerfsonar data gets sent to Nebraska RabbitMQ. From there it gets sent to Fermilab for storage on tape, to ES at UChicago and to ES at Nebraska. \n\n\nCollectors are in a docker container auto-built in dockerHub:              \nivukotic/perfsonar_collectors\n\n\nData analysis\n\n\nThere is a whole docker container with a number of tools and services:          opensciencegrid/network_analytics \n\n\nIt has apache web server, neo4j server, jupyter lab server. All of it is easily deployable on a k8s cluster.",
+            "text": "PerfSONAR\n\n\nData collection\n\n\nPerfsonar data gets sent to Nebraska RabbitMQ. From there it gets sent to Fermilab for storage on tape, to ES at UChicago and to ES at Nebraska. \n\n\nCollectors are in a docker container auto-built in dockerHub:              \nivukotic/perfsonar_collectors\n\n\nData analysis\n\n\nThere is a whole docker container with a number of tools and services:         \nopensciencegrid/network_analytics\n \n\n\nIt has apache web server, neo4j server, jupyter lab server. All of it is easily deployable on a k8s cluster.",
             "title": "PerfSONAR"
         },
         {
@@ -87,7 +87,7 @@
         },
         {
             "location": "/data-sources/perfsonar/#data-analysis",
-            "text": "There is a whole docker container with a number of tools and services:          opensciencegrid/network_analytics   It has apache web server, neo4j server, jupyter lab server. All of it is easily deployable on a k8s cluster.",
+            "text": "There is a whole docker container with a number of tools and services:          opensciencegrid/network_analytics    It has apache web server, neo4j server, jupyter lab server. All of it is easily deployable on a k8s cluster.",
             "title": "Data analysis"
         },
         {
