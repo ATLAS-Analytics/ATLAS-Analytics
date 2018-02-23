@@ -30,13 +30,13 @@
     </url>
         
     <url>
-     <loc>/data-sources/benchmarks/</loc>
+     <loc>/data-sources/xaod/</loc>
      <lastmod>2018-02-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/data-sources/xaod/</loc>
+     <loc>/data-sources/benchmarks/</loc>
      <lastmod>2018-02-22</lastmod>
      <changefreq>daily</changefreq>
     </url>

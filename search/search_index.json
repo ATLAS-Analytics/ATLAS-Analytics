@@ -91,11 +91,6 @@
             "title": "Data analysis"
         },
         {
-            "location": "/data-sources/benchmarks/",
-            "text": "",
-            "title": "Benchmarks"
-        },
-        {
             "location": "/data-sources/xaod/",
             "text": "xAOD monitoring\n\n\nCode that is needed in order to access xAOD data has been instrumented (WHERE???) so it collects information on containers and branches accessed by the user.\n\n\nThis data is reported to a RUCIO appache server that stores it in HDFS. (Who takes care of this??? Where is it documented???)\n\n\nOnce a day information from HDFS is processed using a pig script and a python code and sent to Elasticsearch cluster at UChicago. This code can be found in \nGitHub\n.\n\n\nHDFS @CERN\n\n\nData is in: \nhdfs://analytix//user/rucio01/nongrid_traces/$INPD.json\n\n\nElasticsearch at UChicago\n\n\nData is stored in two indices:\n\n\n\n\n\n\ninformation per job.  Index is named: \nxaod_accesses\n  Template is \nhere\n. Data is produced and indexed directly by the pig script. \n\n\n\n\n\n\ncontainer or branch access. Index is named: \nxaod_job_accesses\n  Template is \nhere\n.\n\n\n\n\n\n\nDashboards\n\n\nAnalysis\n\n\nHere links to relevant Jupyter notebooks.1",
             "title": "xAOD"
@@ -124,6 +119,11 @@
             "location": "/data-sources/xaod/#analysis",
             "text": "Here links to relevant Jupyter notebooks.1",
             "title": "Analysis"
+        },
+        {
+            "location": "/data-sources/benchmarks/",
+            "text": "",
+            "title": "Benchmarks"
         },
         {
             "location": "/data-sources/rtt/",
