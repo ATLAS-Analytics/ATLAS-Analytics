@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "Welcome to ATLAS Analytics documentation\n\n\nATLAS Analytics consists of numerous databases and services running at several distributed computing clusters, managed by different groups.\n\n\nThis documentation will try to provide one stop documentation to all our users.\nA brief overview of the system can be found  ...\n\n\nPlease feel free to update directly in the GitHub repository. To get access or rebuild the site please contact Ilija Vukotic.\n\n\nQuick links\n\n\n\n\n\n\n\n\nMonitoring\n\n\nAnalytics\n\n\n\n\n\n\n\n\n\n\nbigPanda\n\n\nJupyter UC\n\n\n\n\n\n\nUC ES",
+            "text": "Welcome to ATLAS Analytics documentation\n\n\nATLAS Analytics consists of numerous databases and services running at several distributed computing clusters, managed by different groups.\n\n\nThis documentation will try to provide one stop documentation to all our users.\nA brief overview of the system can be found  ...\n\n\nPlease feel free to update directly in the GitHub repository. To get access or rebuild the site please contact Ilija Vukotic.\n\n\nQuick links\n\n\n\n\n\n\n\n\nMonitoring\n\n\nAnalytics\n\n\n\n\n\n\n\n\n\n\nbigPanda\n\n\nJupyter UC\n\n\n\n\n\n\nUC ES\n\n\n\n\n\n\n\n\n\n\nUse\n\n\nSite administration\n\n\nStorage\n\n\nData access\n\n\nJobs\n\n\nNetwork issues\n\n\nAccounting\n\n\nClouds\n\n\nADC\n\n\nFTS performance\n\n\nJob efficiency",
             "title": "Home"
         },
         {
@@ -14,6 +14,61 @@
             "location": "/#quick-links",
             "text": "Monitoring  Analytics      bigPanda  Jupyter UC    UC ES",
             "title": "Quick links"
+        },
+        {
+            "location": "/#use",
+            "text": "",
+            "title": "Use"
+        },
+        {
+            "location": "/#site-administration",
+            "text": "",
+            "title": "Site administration"
+        },
+        {
+            "location": "/#storage",
+            "text": "",
+            "title": "Storage"
+        },
+        {
+            "location": "/#data-access",
+            "text": "",
+            "title": "Data access"
+        },
+        {
+            "location": "/#jobs",
+            "text": "",
+            "title": "Jobs"
+        },
+        {
+            "location": "/#network-issues",
+            "text": "",
+            "title": "Network issues"
+        },
+        {
+            "location": "/#accounting",
+            "text": "",
+            "title": "Accounting"
+        },
+        {
+            "location": "/#clouds",
+            "text": "",
+            "title": "Clouds"
+        },
+        {
+            "location": "/#adc",
+            "text": "",
+            "title": "ADC"
+        },
+        {
+            "location": "/#fts-performance",
+            "text": "",
+            "title": "FTS performance"
+        },
+        {
+            "location": "/#job-efficiency",
+            "text": "",
+            "title": "Job efficiency"
         },
         {
             "location": "/data-sources/Distributed_processing/",
