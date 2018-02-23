@@ -14,13 +14,13 @@ POST /_template/xaod_accesses
   "mappings": {
     "doc": {
       "properties": {
-    	"type": {"type": "keyword" },
+    	  "type": {"type": "keyword" },
         "FileType": {"type": "keyword" },
         "Grid": { "type": "integer" },
         "name":  {"type": "keyword" },
-         "jobs":  { "type": "integer" },
-         "nJobs": { "type": "integer" },
-         "timestamp": { "type": "date", "format": "epoch_millis"}
+        "jobs":  { "type": "integer" },
+        "nJobs": { "type": "integer" },
+        "timestamp": { "type": "date", "format": "epoch_millis"}
       }
     }
   }

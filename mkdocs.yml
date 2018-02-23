@@ -2,7 +2,7 @@ site_name: ATLAS Analytics
 pages:
     - Home: index.md
     - Data sources: 
-        - 'Panda': 'data-sources/panda.md'
+        - 'Distributed Processing': 'data-sources/Distributed_processing.md'
         - 'FTS': 'data-sources/fts.md'
         - 'PerfSONAR': 'data-sources/perfsonar.md'
         - 'Benchmarks': 'data-sources/benchmarks.md'

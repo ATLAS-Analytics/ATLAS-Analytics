@@ -1,6 +1,0 @@
-### PANDA
-
-## Jobs
-
-## Tasks
-
