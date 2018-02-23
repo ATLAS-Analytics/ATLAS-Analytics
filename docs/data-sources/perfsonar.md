@@ -8,7 +8,7 @@ Collectors are in a docker container auto-built in dockerHub:              __ivu
     
 ## Data analysis
 
-There is a whole docker container with a number of tools and services:          opensciencegrid/network_analytics 
+There is a whole docker container with a number of tools and services:         __opensciencegrid/network_analytics__ 
 
 It has apache web server, neo4j server, jupyter lab server. All of it is easily deployable on a k8s cluster.
     
