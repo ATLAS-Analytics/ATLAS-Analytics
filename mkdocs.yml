@@ -5,8 +5,8 @@ pages:
         - 'Distributed Processing': 'data-sources/Distributed_processing.md'
         - 'FTS': 'data-sources/fts.md'
         - 'PerfSONAR': 'data-sources/perfsonar.md'
-        - 'Benchmarks': 'data-sources/benchmarks.md'
         - 'xAOD': 'data-sources/xaod.md'
+        - 'Benchmarks': 'data-sources/benchmarks.md'
         - 'RTT': 'data-sources/rtt.md'
     - Infrastructure:
         - 'Computing': 'infrastructure/computing_nodes.md'

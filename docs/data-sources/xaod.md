@@ -15,9 +15,9 @@ Data is in: ```hdfs://analytix//user/rucio01/nongrid_traces/$INPD.json```
 
 Data is stored in two indices:
 
-*   information per job.  Index is named: *xaod_accesses*  Template is [here](xAOD/xaod_job_accesses.template). Data is produced and indexed directly by the pig script. 
+*   information per job.  Index is named: *xaod_accesses*  Template is [here](xaod_resources/xaod_job_accesses.template). Data is produced and indexed directly by the pig script. 
 
-*   container or branch access. Index is named: *xaod_job_accesses*  Template is [here](xAOD/xaod_accesses.template).
+*   container or branch access. Index is named: *xaod_job_accesses*  Template is [here](xaod_resources/xaod_accesses.template).
 
 ### Dashboards
 
