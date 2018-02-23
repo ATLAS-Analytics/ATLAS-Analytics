@@ -177,14 +177,11 @@
 
 <h1 id="perfsonar">PerfSONAR</h1>
 <h2 id="data-collection">Data collection</h2>
-<pre><code>Perfsonar data gets sent to Nebraska RabbitMQ. From there it gets sent to Fermilab for storage on tape, to ES at UChicago and to ES at Nebraska.
-
-Collectors are in a docker container auto-built in dockerHub: ivukotic/perfsonar_collectors
-</code></pre>
+<p>Perfsonar data gets sent to Nebraska RabbitMQ. From there it gets sent to Fermilab for storage on tape, to ES at UChicago and to ES at Nebraska. </p>
+<p>Collectors are in a docker container auto-built in dockerHub:              <strong>ivukotic/perfsonar_collectors</strong></p>
 <h2 id="data-analysis">Data analysis</h2>
-<pre><code>There is a whole docker container with a number of tools and services: opensciencegrid/network_analytics 
-It has apache web server, neo4j server, jupyter lab server. All of it is easily deployable on a k8s cluster.
-</code></pre></div>
+<p>There is a whole docker container with a number of tools and services:          opensciencegrid/network_analytics </p>
+<p>It has apache web server, neo4j server, jupyter lab server. All of it is easily deployable on a k8s cluster.</p></div>
         </div>
 
         <footer class="col-md-12">
