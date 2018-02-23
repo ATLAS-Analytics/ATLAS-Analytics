@@ -168,11 +168,23 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#perfsonar">PerfSONAR</a></li>
+            <li><a href="#data-collection">Data collection</a></li>
+            <li><a href="#data-analysis">Data analysis</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h1 id="perfsonar">PerfSONAR</h1>
+<h2 id="data-collection">Data collection</h2>
+<pre><code>Perfsonar data gets sent to Nebraska RabbitMQ. From there it gets sent to Fermilab for storage on tape, to ES at UChicago and to ES at Nebraska.
+
+Collectors are in a docker container auto-built in dockerHub: ivukotic/perfsonar_collectors
+</code></pre>
+<h2 id="data-analysis">Data analysis</h2>
+<pre><code>There is a whole docker container with a number of tools and services: opensciencegrid/network_analytics 
+It has apache web server, neo4j server, jupyter lab server. All of it is easily deployable on a k8s cluster.
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
