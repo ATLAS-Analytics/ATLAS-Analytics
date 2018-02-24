@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,37 +13,37 @@
         
     <url>
      <loc>/data-sources/Distributed_processing/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data-sources/fts/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data-sources/perfsonar/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data-sources/xaod/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data-sources/benchmarks/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/data-sources/rtt/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -53,31 +53,31 @@
         
     <url>
      <loc>/infrastructure/computing_nodes/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/infrastructure/amq/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/infrastructure/elasticsearch/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/infrastructure/hadoop/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/infrastructure/logstash/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -87,31 +87,31 @@
         
     <url>
      <loc>/user-guide/es_and_kibana/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/user-guide/hadoop/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/user-guide/spark/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/user-guide/pig/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/user-guide/jupyter/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -120,7 +120,7 @@
     
     <url>
      <loc>/about/</loc>
-     <lastmod>2018-02-22</lastmod>
+     <lastmod>2018-02-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

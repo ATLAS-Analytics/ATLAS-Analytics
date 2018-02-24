@@ -170,14 +170,23 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#distributed-processing">Distributed processing</a></li>
         <li class="main "><a href="#jobs">Jobs</a></li>
+            <li><a href="#enrichments">Enrichments</a></li>
         <li class="main "><a href="#tasks">Tasks</a></li>
+            <li><a href="#enrichments_1">Enrichments</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h3 id="distributed-processing">Distributed processing</h3>
 <h2 id="jobs">Jobs</h2>
-<h2 id="tasks">Tasks</h2></div>
+<h3 id="enrichments">Enrichments</h3>
+<h4 id="parent-child-relationship">Parent-child relationship</h4>
+<p>When a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDN table <strong>this</strong>. A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.</p>
+<h4 id="job-status">Job status</h4>
+<p>Every time job changes a state (defined <a href="../panda job state page">here</a> ) one row is added to panda_job_status table with the new state and timestamp.
+This information is collected by a sqoop script, and saved in hdfs. Another pig script will read it from there, calculate time job spent in any of the states and add these times to jobs archive UC Elasticsearch indices. Variables are:</p>
+<h2 id="tasks">Tasks</h2>
+<h3 id="enrichments_1">Enrichments</h3></div>
         </div>
 
         <footer class="col-md-12">
