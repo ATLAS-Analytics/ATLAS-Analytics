@@ -8,6 +8,12 @@ pages:
         - 'xAOD': 'data-sources/xaod.md'
         - 'Benchmarks': 'data-sources/benchmarks.md'
         - 'RTT': 'data-sources/rtt.md'
+        - 'ESnet': 'data-sources/esnet.md'
+    # - Monitoring:
+    #     # - 
+    # - Analytics:
+
+    - Alarms and Alerts: 'alerts_and_alarms.md' 
     - Infrastructure:
         - 'Computing': 'infrastructure/computing_nodes.md'
         - 'AMQ': 'infrastructure/amq.md'

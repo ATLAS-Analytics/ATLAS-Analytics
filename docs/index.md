@@ -13,17 +13,16 @@ Monitoring | Analytics
 [bigPanda](https://bigpanda.cern.ch/) | [Jupyter UC](http://jupyter.mwt2.org:9999)
 [UC ES](http://atlas-kibana.mwt2.org) |
 
-# Use
 
-## Site administration
-### Storage
-### Data access
-### Jobs
-### Network issues
+# Site administration
+## Storage
+## Data access
+## Jobs
+## Network issues
 
-## Accounting
-### Clouds
+# Accounting
+## Clouds
 
-## ADC
-### FTS performance
-### Job efficiency
+# ADC
+## FTS performance
+## Job efficiency
