@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "About\n\n\nATLAS Analytics consists of numerous databases and services running at several distributed computing clusters, managed by different groups.\n\n\nThis documentation will try to provide one stop documentation to all our users.\nA brief overview of the system can be found  ...\n\n\nPlease feel free to update directly in the GitHub repository. To get access or rebuild the site please contact Ilija Vukotic.\n\n\nQuick links\n\n\n\n\n\n\n\n\nMonitoring\n\n\nAnalytics\n\n\n\n\n\n\n\n\n\n\nbigPanda\n\n\nJupyter UC\n\n\n\n\n\n\nUC ES",
+            "text": "About\n\n\nATLAS Analytics consists of numerous databases and services running at several distributed computing clusters, managed by different groups.\n\n\nThis documentation will try to provide one stop documentation to all our users.\nA brief overview of the system can be found  ...\n\n\nPlease feel free to update directly in the GitHub repository. To get access or rebuild the site please contact Ilija Vukotic.\n\n\nQuick links\n\n\n\n\n\n\n\n\nMonitoring\n\n\nAnalytics\n\n\n\n\n\n\n\n\n\n\nbigPanda\n\n\nJupyter UC\n\n\n\n\n\n\nES UChicago\n\n\n\n\n\n\n\n\nES CERN\n\n\n\n\n\n\n\n\nMonit",
             "title": "Home"
         },
         {
@@ -12,12 +12,12 @@
         },
         {
             "location": "/#quick-links",
-            "text": "Monitoring  Analytics      bigPanda  Jupyter UC    UC ES",
+            "text": "Monitoring  Analytics      bigPanda  Jupyter UC    ES UChicago     ES CERN     Monit",
             "title": "Quick links"
         },
         {
             "location": "/sites/",
-            "text": "Site administration\n\n\nStorage\n\n\nData access\n\n\nJobs\n\n\nNetwork issues",
+            "text": "Site administration\n\n\nStorage\n\n\nJobs IO\n\n\nSite movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:\n\n spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)\n\n spot LAN issues (bad links, congested switches, ...)\n* optimize access type (copy-to-scratch)\n\n\nJobs\n\n\nNetwork issues",
             "title": "Sites"
         },
         {
@@ -31,9 +31,9 @@
             "title": "Storage"
         },
         {
-            "location": "/sites/#data-access",
-            "text": "",
-            "title": "Data access"
+            "location": "/sites/#jobs-io",
+            "text": "Site movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:  spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)  spot LAN issues (bad links, congested switches, ...)\n* optimize access type (copy-to-scratch)",
+            "title": "Jobs IO"
         },
         {
             "location": "/sites/#jobs",

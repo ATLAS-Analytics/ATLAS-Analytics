@@ -196,7 +196,7 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#site-administration">Site administration</a></li>
             <li><a href="#storage">Storage</a></li>
-            <li><a href="#data-access">Data access</a></li>
+            <li><a href="#jobs-io">Jobs IO</a></li>
             <li><a href="#jobs">Jobs</a></li>
             <li><a href="#network-issues">Network issues</a></li>
     </ul>
@@ -205,7 +205,11 @@
 
 <h1 id="site-administration">Site administration</h1>
 <h2 id="storage">Storage</h2>
-<h2 id="data-access">Data access</h2>
+<h2 id="jobs-io">Jobs IO</h2>
+<p>Site movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:
+<em> spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)
+</em> spot LAN issues (bad links, congested switches, ...)
+* optimize access type (copy-to-scratch)</p>
 <h2 id="jobs">Jobs</h2>
 <h2 id="network-issues">Network issues</h2></div>
         </div>
