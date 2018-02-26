@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "About\n\n\nATLAS Analytics consists of numerous databases and services running at several distributed computing clusters, managed by different groups.\n\n\nThis documentation will try to provide one stop documentation to all our users.\nA brief overview of the system can be found  ...\n\n\nPlease feel free to update directly in the GitHub repository. To get access or rebuild the site please contact Ilija Vukotic.\n\n\nQuick links\n\n\n\n\n\n\n\n\nMonitoring\n\n\nAnalytics\n\n\n\n\n\n\n\n\n\n\nbigPanda\n\n\nJupyter UC\n\n\n\n\n\n\nUC ES\n\n\n\n\n\n\n\n\n\n\nSite administration\n\n\nStorage\n\n\nData access\n\n\nJobs\n\n\nNetwork issues\n\n\nAccounting\n\n\nClouds\n\n\nADC\n\n\nFTS performance\n\n\nJob efficiency",
+            "text": "About\n\n\nATLAS Analytics consists of numerous databases and services running at several distributed computing clusters, managed by different groups.\n\n\nThis documentation will try to provide one stop documentation to all our users.\nA brief overview of the system can be found  ...\n\n\nPlease feel free to update directly in the GitHub repository. To get access or rebuild the site please contact Ilija Vukotic.\n\n\nQuick links\n\n\n\n\n\n\n\n\nMonitoring\n\n\nAnalytics\n\n\n\n\n\n\n\n\n\n\nbigPanda\n\n\nJupyter UC\n\n\n\n\n\n\nUC ES",
             "title": "Home"
         },
         {
@@ -16,54 +16,69 @@
             "title": "Quick links"
         },
         {
-            "location": "/#site-administration",
+            "location": "/sites/",
+            "text": "Site administration\n\n\nStorage\n\n\nData access\n\n\nJobs\n\n\nNetwork issues",
+            "title": "Sites"
+        },
+        {
+            "location": "/sites/#site-administration",
             "text": "",
             "title": "Site administration"
         },
         {
-            "location": "/#storage",
+            "location": "/sites/#storage",
             "text": "",
             "title": "Storage"
         },
         {
-            "location": "/#data-access",
+            "location": "/sites/#data-access",
             "text": "",
             "title": "Data access"
         },
         {
-            "location": "/#jobs",
+            "location": "/sites/#jobs",
             "text": "",
             "title": "Jobs"
         },
         {
-            "location": "/#network-issues",
+            "location": "/sites/#network-issues",
             "text": "",
             "title": "Network issues"
         },
         {
-            "location": "/#accounting",
-            "text": "",
-            "title": "Accounting"
+            "location": "/ADC/",
+            "text": "ADC\n\n\nFTS performance\n\n\nJob efficiency",
+            "title": "ADC"
         },
         {
-            "location": "/#clouds",
-            "text": "",
-            "title": "Clouds"
-        },
-        {
-            "location": "/#adc",
+            "location": "/ADC/#adc",
             "text": "",
             "title": "ADC"
         },
         {
-            "location": "/#fts-performance",
+            "location": "/ADC/#fts-performance",
             "text": "",
             "title": "FTS performance"
         },
         {
-            "location": "/#job-efficiency",
+            "location": "/ADC/#job-efficiency",
             "text": "",
             "title": "Job efficiency"
+        },
+        {
+            "location": "/accounting/",
+            "text": "Accounting\n\n\nClouds",
+            "title": "Accounting"
+        },
+        {
+            "location": "/accounting/#accounting",
+            "text": "",
+            "title": "Accounting"
+        },
+        {
+            "location": "/accounting/#clouds",
+            "text": "",
+            "title": "Clouds"
         },
         {
             "location": "/data-sources/Distributed_processing/",
@@ -221,19 +236,9 @@
             "title": "Data analysis"
         },
         {
-            "location": "/alerts_and_alarms/",
-            "text": "Alarms & Alerts\n\n\nWe are periodically running a number of different checks. When these checks fail we generate an \nAlarm\n. When a person gets an e-mail concerning an alarm, we call that an \nAlert\n. \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu).",
-            "title": "Alarms and Alerts"
-        },
-        {
-            "location": "/alerts_and_alarms/#alarms-alerts",
-            "text": "We are periodically running a number of different checks. When these checks fail we generate an  Alarm . When a person gets an e-mail concerning an alarm, we call that an  Alert . \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu).",
-            "title": "Alarms &amp; Alerts"
-        },
-        {
             "location": "/infrastructure/computing_nodes/",
             "text": "Old infrastructure\n\n\nNodes\n\n\naianalytics nodes\n\n\nOpenStack environment variables set for Project = 'ATLAS Services Analytics'\n\n\n\n\n\n\n\n\nNode\n\n\nLocation\n\n\n\n\n\n\n\n\n\n\naianalytics01\n\n\ncern-geneva-b\n\n\n\n\n\n\naianalytics03\n\n\ncern-geneva-b\n\n\n\n\n\n\naianalytics10\n\n\ncern-geneva-a\n\n\n\n\n\n\naianalytics12\n\n\ncern-wigner-a\n\n\n\n\n\n\naianalytics13\n\n\ncern-wigner-a\n\n\n\n\n\n\naianalytics14\n\n\ncern-geneva-c\n\n\n\n\n\n\naianalytics15\n\n\ncern-geneva-c\n\n\n\n\n\n\naianalytics16\n\n\ncern-geneva-a\n\n\n\n\n\n\n\n\naiatlas013 | cern-wigner-b \naiatlas025 | cern-wigner-b \n\n\n\n\naiatlas114.cern.ch\n\n\n\n\nAccounts\n\n\nadcmusr3 is a fax monitoring account running things on aiatlas114.cern.ch\n  aflume - service account \n\n\nNew infrastructure\n\n\nNodes\n\n\nAccounts\n\n\n\n\n\n\n\n\nName\n\n\nLogin\n\n\nEmail\n\n\n\n\n\n\n\n\n\n\nATLAS analytics service\n\n\nanalyticssvc\n\n\nanalytics.service@cern.ch\n\n\n\n\n\n\nATLAS analytics\n\n\nanalytics\n\n\natlas.analytics@cern.ch",
-            "title": "Computing"
+            "title": "Backend nodes "
         },
         {
             "location": "/infrastructure/computing_nodes/#old-infrastructure",
@@ -269,6 +274,11 @@
             "location": "/infrastructure/computing_nodes/#accounts_1",
             "text": "Name  Login  Email      ATLAS analytics service  analyticssvc  analytics.service@cern.ch    ATLAS analytics  analytics  atlas.analytics@cern.ch",
             "title": "Accounts"
+        },
+        {
+            "location": "/infrastructure/analytics/",
+            "text": "",
+            "title": "Analytics"
         },
         {
             "location": "/infrastructure/amq/",
@@ -321,6 +331,16 @@
             "title": "Logstash"
         },
         {
+            "location": "/alarms_and_alerts/",
+            "text": "Alarms & Alerts\n\n\nWe are periodically running a number of different checks. When these checks fail we generate an \nAlarm\n. When a person gets an e-mail concerning an alarm, we call that an \nAlert\n. \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu).",
+            "title": "Alarms and Alerts"
+        },
+        {
+            "location": "/alarms_and_alerts/#alarms-alerts",
+            "text": "We are periodically running a number of different checks. When these checks fail we generate an  Alarm . When a person gets an e-mail concerning an alarm, we call that an  Alert . \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu).",
+            "title": "Alarms &amp; Alerts"
+        },
+        {
             "location": "/user-guide/es_and_kibana/",
             "text": "ES and Kibana",
             "title": "Elasticsearch & Kibana"
@@ -349,31 +369,6 @@
             "location": "/user-guide/jupyter/",
             "text": "",
             "title": "Jupyter"
-        },
-        {
-            "location": "/about/",
-            "text": "ATLAS analytics\n\n\nv 0.1.1\n\n\nIlija Vukotic\n\n\ncurrent date",
-            "title": "About"
-        },
-        {
-            "location": "/about/#atlas-analytics",
-            "text": "",
-            "title": "ATLAS analytics"
-        },
-        {
-            "location": "/about/#v-011",
-            "text": "",
-            "title": "v 0.1.1"
-        },
-        {
-            "location": "/about/#ilija-vukotic",
-            "text": "",
-            "title": "Ilija Vukotic"
-        },
-        {
-            "location": "/about/#current-date",
-            "text": "",
-            "title": "current date"
         }
     ]
 }

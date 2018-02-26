@@ -57,94 +57,113 @@
                     <li class="active">
                         <a href=".">Home</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data sources <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="data-sources/Distributed_processing/">Distributed Processing</a>
-</li>
-                            
-<li >
-    <a href="data-sources/fts/">FTS</a>
-</li>
-                            
-<li >
-    <a href="data-sources/perfsonar/">PerfSONAR</a>
-</li>
-                            
-<li >
-    <a href="data-sources/xaod/">xAOD</a>
-</li>
-                            
-<li >
-    <a href="data-sources/benchmarks/">Benchmarks</a>
-</li>
-                            
-<li >
-    <a href="data-sources/rtt/">RTT</a>
-</li>
-                            
-<li >
-    <a href="data-sources/esnet/">ESnet</a>
-</li>
-                        </ul>
+                    <li >
+                        <a href="sites/">Sites</a>
                     </li>
                     <li >
-                        <a href="alerts_and_alarms/">Alarms and Alerts</a>
+                        <a href="ADC/">ADC</a>
+                    </li>
+                    <li >
+                        <a href="accounting/">Accounting</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Infrastructure <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
+  <li class="dropdown-submenu">
+    <a href="#">Data sources</a>
+    <ul class="dropdown-menu">
+            
 <li >
-    <a href="infrastructure/computing_nodes/">Computing</a>
+    <a href="data-sources/Distributed_processing/">Distributed Processing</a>
 </li>
+            
+<li >
+    <a href="data-sources/fts/">FTS</a>
+</li>
+            
+<li >
+    <a href="data-sources/perfsonar/">PerfSONAR</a>
+</li>
+            
+<li >
+    <a href="data-sources/xaod/">xAOD</a>
+</li>
+            
+<li >
+    <a href="data-sources/benchmarks/">Benchmarks</a>
+</li>
+            
+<li >
+    <a href="data-sources/rtt/">RTT</a>
+</li>
+            
+<li >
+    <a href="data-sources/esnet/">ESnet</a>
+</li>
+    </ul>
+  </li>
                             
+  <li class="dropdown-submenu">
+    <a href="#">Computing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="infrastructure/computing_nodes/">Backend nodes </a>
+</li>
+            
+<li >
+    <a href="infrastructure/analytics/">Analytics</a>
+</li>
+            
 <li >
     <a href="infrastructure/amq/">AMQ</a>
 </li>
-                            
+            
 <li >
     <a href="infrastructure/elasticsearch/">Elasticsearch</a>
 </li>
-                            
+            
 <li >
     <a href="infrastructure/hadoop/">Hadoop</a>
 </li>
-                            
+            
 <li >
     <a href="infrastructure/logstash/">Logstash</a>
 </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guides <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
+    </ul>
+  </li>
                             
+<li >
+    <a href="alarms_and_alerts/">Alarms and Alerts</a>
+</li>
+                            
+  <li class="dropdown-submenu">
+    <a href="#">User Guides</a>
+    <ul class="dropdown-menu">
+            
 <li >
     <a href="user-guide/es_and_kibana/">Elasticsearch & Kibana</a>
 </li>
-                            
+            
 <li >
     <a href="user-guide/hadoop/">Hadoop</a>
 </li>
-                            
+            
 <li >
     <a href="user-guide/spark/">Spark</a>
 </li>
-                            
+            
 <li >
     <a href="user-guide/pig/">Pig Latin</a>
 </li>
-                            
+            
 <li >
     <a href="user-guide/jupyter/">Jupyter</a>
 </li>
+    </ul>
+  </li>
                         </ul>
-                    </li>
-                    <li >
-                        <a href="about/">About</a>
                     </li>
                 </ul>
 
@@ -160,7 +179,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="data-sources/Distributed_processing/">
+                        <a rel="prev" href="sites/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -177,16 +196,6 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#about">About</a></li>
         <li class="main "><a href="#quick-links">Quick links</a></li>
-        <li class="main "><a href="#site-administration">Site administration</a></li>
-            <li><a href="#storage">Storage</a></li>
-            <li><a href="#data-access">Data access</a></li>
-            <li><a href="#jobs">Jobs</a></li>
-            <li><a href="#network-issues">Network issues</a></li>
-        <li class="main "><a href="#accounting">Accounting</a></li>
-            <li><a href="#clouds">Clouds</a></li>
-        <li class="main "><a href="#adc">ADC</a></li>
-            <li><a href="#fts-performance">FTS performance</a></li>
-            <li><a href="#job-efficiency">Job efficiency</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -214,17 +223,7 @@ A brief overview of the system can be found  ...</p>
 <td></td>
 </tr>
 </tbody>
-</table>
-<h1 id="site-administration">Site administration</h1>
-<h2 id="storage">Storage</h2>
-<h2 id="data-access">Data access</h2>
-<h2 id="jobs">Jobs</h2>
-<h2 id="network-issues">Network issues</h2>
-<h1 id="accounting">Accounting</h1>
-<h2 id="clouds">Clouds</h2>
-<h1 id="adc">ADC</h1>
-<h2 id="fts-performance">FTS performance</h2>
-<h2 id="job-efficiency">Job efficiency</h2></div>
+</table></div>
         </div>
 
         <footer class="col-md-12">
@@ -306,5 +305,5 @@ A brief overview of the system can be found  ...</p>
 
 <!--
 MkDocs version : 0.17.2
-Build Date UTC : 2018-02-26 21:55:39
+Build Date UTC : 2018-02-26 22:55:56
 -->
