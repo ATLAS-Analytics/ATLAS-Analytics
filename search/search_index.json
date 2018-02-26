@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "About\n\n\nATLAS Analytics consists of numerous databases and services running at several distributed computing clusters, managed by different groups.\n\n\nThis documentation will try to provide one stop documentation to all our users.\nA brief overview of the system can be found  ...\n\n\nPlease feel free to update directly in the GitHub repository. To get access or rebuild the site please contact Ilija Vukotic.\n\n\nQuick links\n\n\n\n\n\n\n\n\nMonitoring\n\n\nAnalytics\n\n\n\n\n\n\n\n\n\n\nbigPanda\n\n\nJupyter UC\n\n\n\n\n\n\nUC ES\n\n\n\n\n\n\n\n\n\n\nUse\n\n\nSite administration\n\n\nStorage\n\n\nData access\n\n\nJobs\n\n\nNetwork issues\n\n\nAccounting\n\n\nClouds\n\n\nADC\n\n\nFTS performance\n\n\nJob efficiency",
+            "text": "About\n\n\nATLAS Analytics consists of numerous databases and services running at several distributed computing clusters, managed by different groups.\n\n\nThis documentation will try to provide one stop documentation to all our users.\nA brief overview of the system can be found  ...\n\n\nPlease feel free to update directly in the GitHub repository. To get access or rebuild the site please contact Ilija Vukotic.\n\n\nQuick links\n\n\n\n\n\n\n\n\nMonitoring\n\n\nAnalytics\n\n\n\n\n\n\n\n\n\n\nbigPanda\n\n\nJupyter UC\n\n\n\n\n\n\nUC ES\n\n\n\n\n\n\n\n\n\n\nSite administration\n\n\nStorage\n\n\nData access\n\n\nJobs\n\n\nNetwork issues\n\n\nAccounting\n\n\nClouds\n\n\nADC\n\n\nFTS performance\n\n\nJob efficiency",
             "title": "Home"
         },
         {
@@ -14,11 +14,6 @@
             "location": "/#quick-links",
             "text": "Monitoring  Analytics      bigPanda  Jupyter UC    UC ES",
             "title": "Quick links"
-        },
-        {
-            "location": "/#use",
-            "text": "",
-            "title": "Use"
         },
         {
             "location": "/#site-administration",
@@ -204,6 +199,36 @@
             "location": "/data-sources/rtt/",
             "text": "",
             "title": "RTT"
+        },
+        {
+            "location": "/data-sources/esnet/",
+            "text": "ESnet\n\n\nData collection\n\n\nThanks to Jon Dugan we can collect data from ESnet \nREST interface\n and send it to ES at UChicago. \nCollector is in \nGitHub repo\n while a docker container is auto-built in dockerHub: \natlasanalyticsservice/esnet\n.\n\n\nData analysis\n\n\nWe still did not start analyzing this data. Once we do, it will be done using tools and services of docker container:        \nopensciencegrid/network_analytics",
+            "title": "ESnet"
+        },
+        {
+            "location": "/data-sources/esnet/#esnet",
+            "text": "",
+            "title": "ESnet"
+        },
+        {
+            "location": "/data-sources/esnet/#data-collection",
+            "text": "Thanks to Jon Dugan we can collect data from ESnet  REST interface  and send it to ES at UChicago. \nCollector is in  GitHub repo  while a docker container is auto-built in dockerHub:  atlasanalyticsservice/esnet .",
+            "title": "Data collection"
+        },
+        {
+            "location": "/data-sources/esnet/#data-analysis",
+            "text": "We still did not start analyzing this data. Once we do, it will be done using tools and services of docker container:         opensciencegrid/network_analytics",
+            "title": "Data analysis"
+        },
+        {
+            "location": "/alerts_and_alarms/",
+            "text": "Alarms & Alerts\n\n\nWe are periodically running a number of different checks. When these checks fail we generate an \nAlarm\n. When a person gets an e-mail concerning an alarm, we call that an \nAlert\n. \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu).",
+            "title": "Alarms and Alerts"
+        },
+        {
+            "location": "/alerts_and_alarms/#alarms-alerts",
+            "text": "We are periodically running a number of different checks. When these checks fail we generate an  Alarm . When a person gets an e-mail concerning an alarm, we call that an  Alert . \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu).",
+            "title": "Alarms &amp; Alerts"
         },
         {
             "location": "/infrastructure/computing_nodes/",

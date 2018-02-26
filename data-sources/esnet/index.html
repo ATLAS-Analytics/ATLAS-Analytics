@@ -8,7 +8,7 @@
         <meta name="author" content="Ilija Vukotic">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>AMQ - ATLAS Analytics</title>
+        <title>ESnet - ATLAS Analytics</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -57,64 +57,64 @@
                     <li >
                         <a href="../..">Home</a>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data sources <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="../../data-sources/Distributed_processing/">Distributed Processing</a>
+    <a href="../Distributed_processing/">Distributed Processing</a>
 </li>
                             
 <li >
-    <a href="../../data-sources/fts/">FTS</a>
+    <a href="../fts/">FTS</a>
 </li>
                             
 <li >
-    <a href="../../data-sources/perfsonar/">PerfSONAR</a>
+    <a href="../perfsonar/">PerfSONAR</a>
 </li>
                             
 <li >
-    <a href="../../data-sources/xaod/">xAOD</a>
+    <a href="../xaod/">xAOD</a>
 </li>
                             
 <li >
-    <a href="../../data-sources/benchmarks/">Benchmarks</a>
+    <a href="../benchmarks/">Benchmarks</a>
 </li>
                             
 <li >
-    <a href="../../data-sources/rtt/">RTT</a>
+    <a href="../rtt/">RTT</a>
 </li>
                             
-<li >
-    <a href="../../data-sources/esnet/">ESnet</a>
+<li class="active">
+    <a href="./">ESnet</a>
 </li>
                         </ul>
                     </li>
                     <li >
                         <a href="../../alerts_and_alarms/">Alarms and Alerts</a>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Infrastructure <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
 <li >
-    <a href="../computing_nodes/">Computing</a>
-</li>
-                            
-<li class="active">
-    <a href="./">AMQ</a>
+    <a href="../../infrastructure/computing_nodes/">Computing</a>
 </li>
                             
 <li >
-    <a href="../elasticsearch/">Elasticsearch</a>
+    <a href="../../infrastructure/amq/">AMQ</a>
 </li>
                             
 <li >
-    <a href="../hadoop/">Hadoop</a>
+    <a href="../../infrastructure/elasticsearch/">Elasticsearch</a>
 </li>
                             
 <li >
-    <a href="../logstash/">Logstash</a>
+    <a href="../../infrastructure/hadoop/">Hadoop</a>
+</li>
+                            
+<li >
+    <a href="../../infrastructure/logstash/">Logstash</a>
 </li>
                         </ul>
                     </li>
@@ -155,17 +155,17 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../computing_nodes/">
+                        <a rel="next" href="../rtt/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../elasticsearch/">
+                        <a rel="prev" href="../../alerts_and_alarms/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/ATLAS-Analytics/ATLAS-Analytics/edit/master/docs/infrastructure/amq.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/ATLAS-Analytics/ATLAS-Analytics/edit/master/docs/data-sources/esnet.md"><i class="fa fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -175,11 +175,19 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#esnet">ESnet</a></li>
+            <li><a href="#data-collection">Data collection</a></li>
+            <li><a href="#data-analysis">Data analysis</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h1 id="esnet">ESnet</h1>
+<h2 id="data-collection">Data collection</h2>
+<p>Thanks to Jon Dugan we can collect data from ESnet <a href="https://my.es.net/graphql_token">REST interface</a> and send it to ES at UChicago. 
+Collector is in <a href="https://github.com/ATLAS-Analytics/esnet">GitHub repo</a> while a docker container is auto-built in dockerHub: <strong>atlasanalyticsservice/esnet</strong>.</p>
+<h2 id="data-analysis">Data analysis</h2>
+<p>We still did not start analyzing this data. Once we do, it will be done using tools and services of docker container:        <strong>opensciencegrid/network_analytics</strong> </p></div>
         </div>
 
         <footer class="col-md-12">
