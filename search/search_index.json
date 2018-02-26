@@ -17,7 +17,7 @@
         },
         {
             "location": "/sites/",
-            "text": "Site administration\n\n\nStorage\n\n\nJobs IO\n\n\nSite movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:\n\n spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)\n\n spot LAN issues (bad links, congested switches, ...)\n* optimize access type (copy-to-scratch)\n\n\nJobs\n\n\nNetwork issues",
+            "text": "Site administration\n\n\nStorage\n\n\nJobs IO\n\n\nSite movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:\n * spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)\n * spot LAN issues (bad links, congested switches, ...)\n * optimize access type (copy-to-scratch)\n\n\nJobs\n\n\nNetwork issues",
             "title": "Sites"
         },
         {
@@ -32,7 +32,7 @@
         },
         {
             "location": "/sites/#jobs-io",
-            "text": "Site movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:  spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)  spot LAN issues (bad links, congested switches, ...)\n* optimize access type (copy-to-scratch)",
+            "text": "Site movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:\n * spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)\n * spot LAN issues (bad links, congested switches, ...)\n * optimize access type (copy-to-scratch)",
             "title": "Jobs IO"
         },
         {
