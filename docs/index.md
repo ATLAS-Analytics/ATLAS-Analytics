@@ -11,18 +11,9 @@ Please feel free to update directly in the GitHub repository. To get access or r
 Monitoring | Analytics
 ----|---
 [bigPanda](https://bigpanda.cern.ch/) | [Jupyter UC](http://jupyter.mwt2.org:9999)
-[UC ES](http://atlas-kibana.mwt2.org) |
+[ES UChicago](http://atlas-kibana.mwt2.org) |
+[ES CERN](https://es-atlas.cern.ch) |
+[Monit](https://monit-kibana.cern.ch) |
 
 
-# Site administration
-## Storage
-## Data access
-## Jobs
-## Network issues
 
-# Accounting
-## Clouds
-
-# ADC
-## FTS performance
-## Job efficiency

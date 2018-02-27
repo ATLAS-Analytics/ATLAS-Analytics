@@ -1,32 +1,33 @@
 site_name: ATLAS Analytics
 pages:
     - Home: index.md
-    - Data sources: 
-        - 'Distributed Processing': 'data-sources/Distributed_processing.md'
-        - 'FTS': 'data-sources/fts.md'
-        - 'PerfSONAR': 'data-sources/perfsonar.md'
-        - 'xAOD': 'data-sources/xaod.md'
-        - 'Benchmarks': 'data-sources/benchmarks.md'
-        - 'RTT': 'data-sources/rtt.md'
-        - 'ESnet': 'data-sources/esnet.md'
-    # - Monitoring:
-    #     # - 
-    # - Analytics:
-
-    - Alarms and Alerts: 'alerts_and_alarms.md' 
+    - Sites: sites.md
+    - ADC: ADC.md
+    - Accounting: accounting.md
     - Infrastructure:
-        - 'Computing': 'infrastructure/computing_nodes.md'
-        - 'AMQ': 'infrastructure/amq.md'
-        - 'Elasticsearch': 'infrastructure/elasticsearch.md'
-        - 'Hadoop': 'infrastructure/hadoop.md'
-        - 'Logstash': 'infrastructure/logstash.md'
-    - User Guides:
-        - 'Elasticsearch & Kibana': 'user-guide/es_and_kibana.md'
-        - 'Hadoop': 'user-guide/hadoop.md'
-        - 'Spark': 'user-guide/spark.md'
-        - 'Pig Latin': 'user-guide/pig.md'
-        - 'Jupyter': 'user-guide/jupyter.md'
-    - About: about.md
+        - Data sources: 
+            - 'Distributed Processing': data-sources/Distributed_processing.md
+            - FTS: 'data-sources/fts.md'
+            - 'PerfSONAR': 'data-sources/perfsonar.md'
+            - 'xAOD': 'data-sources/xaod.md'
+            - 'Benchmarks': 'data-sources/benchmarks.md'
+            - 'RTT': 'data-sources/rtt.md'
+            - 'ESnet': 'data-sources/esnet.md'
+        - Computing: 
+            - 'Backend nodes ': 'infrastructure/computing_nodes.md'
+            - 'Analytics': 'infrastructure/analytics.md'
+            - 'AMQ': 'infrastructure/amq.md'
+            - 'Elasticsearch': 'infrastructure/elasticsearch.md'
+            - 'Hadoop': 'infrastructure/hadoop.md'
+            - 'Logstash': 'infrastructure/logstash.md'
+        - Alarms and Alerts: 'alarms_and_alerts.md'
+        - User Guides:
+            - 'Elasticsearch & Kibana': 'user-guide/es_and_kibana.md'
+            - 'Hadoop': 'user-guide/hadoop.md'
+            - 'Spark': 'user-guide/spark.md'
+            - 'Pig Latin': 'user-guide/pig.md'
+            - 'Jupyter': 'user-guide/jupyter.md'
+            
 repo_url: https://github.com/ATLAS-Analytics/ATLAS-Analytics
 site_author: Ilija Vukotic
 google_analytics: ['UA-3194765-3', 'ATLAS-Analytics']
