@@ -17,7 +17,7 @@
         },
         {
             "location": "/sites/",
-            "text": "Site administration\n\n\nStorage\n\n\nJobs IO\n\n\nSite movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:\n\n\n\n\nspot problematics WN (full or failed scratch disk, connection issue, missconfiguration)\n\n\nspot LAN issues (bad links, congested switches, ...)\n\n\noptimize access type (copy-to-scratch)\n\n\n\n\nJobs\n\n\nNetwork issues",
+            "text": "Site administration\n\n\nStorage\n\n\nJobs IO\n\n\nSite movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:\n\n\n\n\nspot problematics WN (full or failed scratch disk, connection issue, missconfiguration)\n\n\nspot LAN issues (bad links, congested switches, ...)\n\n\noptimize access type (copy-to-scratch vs. direct access)\n\n\nmake purchasing decissions (switches, NICs, disks) \n\n\n\n\nStarting point should be this \nKibana dashboard\n. To make it show only information from one sites add a line like this to the search bar:\n   \nsitnamee:MWT2\n. First one would look at the visualization named \nerrors\n. Nodes with more than a few errors most probably need a deep inspection. \n   For a deeper investigation we suggest looking separately at WNs connected to the same switch. This is easiest done by making a search like this: \nsitename:MWT2 and hostname:uct2*\n. Big difference in performance can point to a problem with a switch WNs are connected to, or link from that switch to the storage. Feel free to make a special visualization that splits all your WNs in groups, save it (please prepend name of your site to names of your visualizations) so you don't have to redo it every day. You can also save a copy of the dashboard and customize it to your liking. \n\n\nJobs\n\n\nWide Area Network issues\n\n\nIt si very important to quickly spot WAN connectivity issues. There are two easy ways to do it: \n\n\n\n\nSubscribe to an alert on network issues for your site. This check is described \nHERE\n and will alert you to low level problems (broken or saturated link, high packet loss, unstable path)\n\n\nLook at the FTS queues for your site. Long queues can point to bad settings in your FTS server, unusual Rucio requests, etc. Starting point for this kind of investigation is the \nFTS queues\n kibana page. Simply search for all transfers where your site is a source and then where your site is a destination (eg. \nsrc_site:MWT2\n or \ndest_site:MWT2\n). While a few files waiting in a queue for a few hours is not of big concern, a lot of transfers waiting for a long time (agreagate waiting time in years) is of concern.",
             "title": "Sites"
         },
         {
@@ -32,7 +32,7 @@
         },
         {
             "location": "/sites/#jobs-io",
-            "text": "Site movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:   spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)  spot LAN issues (bad links, congested switches, ...)  optimize access type (copy-to-scratch)",
+            "text": "Site movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:   spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)  spot LAN issues (bad links, congested switches, ...)  optimize access type (copy-to-scratch vs. direct access)  make purchasing decissions (switches, NICs, disks)    Starting point should be this  Kibana dashboard . To make it show only information from one sites add a line like this to the search bar:\n    sitnamee:MWT2 . First one would look at the visualization named  errors . Nodes with more than a few errors most probably need a deep inspection. \n   For a deeper investigation we suggest looking separately at WNs connected to the same switch. This is easiest done by making a search like this:  sitename:MWT2 and hostname:uct2* . Big difference in performance can point to a problem with a switch WNs are connected to, or link from that switch to the storage. Feel free to make a special visualization that splits all your WNs in groups, save it (please prepend name of your site to names of your visualizations) so you don't have to redo it every day. You can also save a copy of the dashboard and customize it to your liking.",
             "title": "Jobs IO"
         },
         {
@@ -41,9 +41,9 @@
             "title": "Jobs"
         },
         {
-            "location": "/sites/#network-issues",
-            "text": "",
-            "title": "Network issues"
+            "location": "/sites/#wide-area-network-issues",
+            "text": "It si very important to quickly spot WAN connectivity issues. There are two easy ways to do it:    Subscribe to an alert on network issues for your site. This check is described  HERE  and will alert you to low level problems (broken or saturated link, high packet loss, unstable path)  Look at the FTS queues for your site. Long queues can point to bad settings in your FTS server, unusual Rucio requests, etc. Starting point for this kind of investigation is the  FTS queues  kibana page. Simply search for all transfers where your site is a source and then where your site is a destination (eg.  src_site:MWT2  or  dest_site:MWT2 ). While a few files waiting in a queue for a few hours is not of big concern, a lot of transfers waiting for a long time (agreagate waiting time in years) is of concern.",
+            "title": "Wide Area Network issues"
         },
         {
             "location": "/ADC/",
@@ -332,13 +332,18 @@
         },
         {
             "location": "/alarms_and_alerts/",
-            "text": "Alarms & Alerts\n\n\nWe are periodically running a number of different checks. When these checks fail we generate an \nAlarm\n. When a person gets an e-mail concerning an alarm, we call that an \nAlert\n. \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu).",
+            "text": "Alarms & Alerts\n\n\nWe are periodically running a number of different checks. When these checks fail we generate an \nAlarm\n. When a person gets an e-mail concerning an alarm, we call that an \nAlert\n. \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu). \n\n\nNetwork issues",
             "title": "Alarms and Alerts"
         },
         {
             "location": "/alarms_and_alerts/#alarms-alerts",
             "text": "We are periodically running a number of different checks. When these checks fail we generate an  Alarm . When a person gets an e-mail concerning an alarm, we call that an  Alert . \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu).",
             "title": "Alarms &amp; Alerts"
+        },
+        {
+            "location": "/alarms_and_alerts/#network-issues",
+            "text": "",
+            "title": "Network issues"
         },
         {
             "location": "/user-guide/es_and_kibana/",

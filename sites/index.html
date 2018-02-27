@@ -198,7 +198,7 @@
             <li><a href="#storage">Storage</a></li>
             <li><a href="#jobs-io">Jobs IO</a></li>
             <li><a href="#jobs">Jobs</a></li>
-            <li><a href="#network-issues">Network issues</a></li>
+            <li><a href="#wide-area-network-issues">Wide Area Network issues</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -210,10 +210,19 @@
 <ul>
 <li>spot problematics WN (full or failed scratch disk, connection issue, missconfiguration)</li>
 <li>spot LAN issues (bad links, congested switches, ...)</li>
-<li>optimize access type (copy-to-scratch)</li>
+<li>optimize access type (copy-to-scratch vs. direct access)</li>
+<li>make purchasing decissions (switches, NICs, disks) </li>
 </ul>
+<p>Starting point should be this <a href="http://atlas-kibana.mwt2.org:5601/app/kibana#/dashboard/bc828870-f566-11e7-8f2f-ab6704660c79">Kibana dashboard</a>. To make it show only information from one sites add a line like this to the search bar:
+   <code>sitnamee:MWT2</code>. First one would look at the visualization named <strong>errors</strong>. Nodes with more than a few errors most probably need a deep inspection. 
+   For a deeper investigation we suggest looking separately at WNs connected to the same switch. This is easiest done by making a search like this: <code>sitename:MWT2 and hostname:uct2*</code>. Big difference in performance can point to a problem with a switch WNs are connected to, or link from that switch to the storage. Feel free to make a special visualization that splits all your WNs in groups, save it (please prepend name of your site to names of your visualizations) so you don't have to redo it every day. You can also save a copy of the dashboard and customize it to your liking. </p>
 <h2 id="jobs">Jobs</h2>
-<h2 id="network-issues">Network issues</h2></div>
+<h2 id="wide-area-network-issues">Wide Area Network issues</h2>
+<p>It si very important to quickly spot WAN connectivity issues. There are two easy ways to do it: </p>
+<ul>
+<li>Subscribe to an alert on network issues for your site. This check is described <a href="../alarms_and_alerts/#network-issues">HERE</a> and will alert you to low level problems (broken or saturated link, high packet loss, unstable path)</li>
+<li>Look at the FTS queues for your site. Long queues can point to bad settings in your FTS server, unusual Rucio requests, etc. Starting point for this kind of investigation is the <a href="">FTS queues</a> kibana page. Simply search for all transfers where your site is a source and then where your site is a destination (eg. <code>src_site:MWT2</code> or <code>dest_site:MWT2</code>). While a few files waiting in a queue for a few hours is not of big concern, a lot of transfers waiting for a long time (agreagate waiting time in years) is of concern.</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
