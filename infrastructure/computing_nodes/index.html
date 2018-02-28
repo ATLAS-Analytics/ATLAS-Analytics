@@ -198,8 +198,10 @@
             <li><a href="#nodes">Nodes</a></li>
             <li><a href="#accounts">Accounts</a></li>
         <li class="main "><a href="#new-infrastructure">New infrastructure</a></li>
-            <li><a href="#nodes_1">Nodes</a></li>
+            <li><a href="#kubernetes-cluster">Kubernetes cluster</a></li>
+            <li><a href="#using-your-private-kubernetes-cluster-for-analytics">Using your private kubernetes cluster for analytics</a></li>
             <li><a href="#accounts_1">Accounts</a></li>
+        <li class="main "><a href="#services">SERVICES</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -259,7 +261,19 @@ aiatlas025 | cern-wigner-b </p>
 <p>adcmusr3 is a fax monitoring account running things on aiatlas114.cern.ch
   aflume - service account </p>
 <h1 id="new-infrastructure">New infrastructure</h1>
-<h2 id="nodes_1">Nodes</h2>
+<p>The new infrastructure is based on OpenStack project "ATLAS AnalyticsSvc". It has five m2.medium nodes.</p>
+<h2 id="kubernetes-cluster">Kubernetes cluster</h2>
+<p>All the nodes are under "analytics" kubernetes cluster based on kubernetes-preview template. One node is a master and 4 nodes are minions. 
+The cluster is monitored using Heapster which sends data to ES at UC. Dashboard showing its data is <a href="http://atlas-kibana-dev.mwt2.org/goto/979a26298cd18d1230220f93b7c58bb3">here</a>. </p>
+<h2 id="using-your-private-kubernetes-cluster-for-analytics">Using your private kubernetes cluster for analytics</h2>
+<p>While there is not much documentation the procedure is straightforward. Here the basics:</p>
+<ul>
+<li>Getting your OpenStack resources
+https://openstack.cern.ch/</li>
+<li>Seting up kubernetes cluster</li>
+<li>Installing kubectl and basic commands</li>
+<li>Using Analytics container </li>
+</ul>
 <h2 id="accounts_1">Accounts</h2>
 <table>
 <thead>
@@ -281,7 +295,17 @@ aiatlas025 | cern-wigner-b </p>
 <td>atlas.analytics@cern.ch</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+<h1 id="services">SERVICES</h1>
+<p>To be moved from the old infrastructure
+<em> FTS - old one to be removed (acrontab)
+</em> PerfSONAR - old ones running on aianalytics10.</p>
+<p>Already running on new infrastructure:
+<em> BOINC, BOINC-dev
+</em> Job, Task, Enrichment collectors
+<em> FTS
+</em> DDM accounting
+* xAOD</p></div>
         </div>
 
         <footer class="col-md-12">

@@ -209,15 +209,16 @@
 <p>Jobs data are imported from OracleDB table <strong>ATLAS_PANDA.JOBSARCHIVED4</strong> once per hour. First data is sqooped to hdfs, then preprocessed and sent to UC Elasticsearch index.  </p>
 <h3 id="enrichments">Enrichments</h3>
 <h4 id="parent-child-relationship">Parent-child relationship</h4>
-<p>When a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDB table <strong>ATLAS_PANDA.JEDI_JOB_RETRY_HISTORY</strong>. A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.</p>
+<p>When a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDB table <strong>ATLAS_PANDA.JEDI_JOB_RETRY_HISTORY</strong>. A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.
+<em>At the moment code doing indexing is <a href="https://gitlab.cern.ch/fhoenig/pandajobstates">here</a></em>.</p>
 <h4 id="job-status">Job status</h4>
-<p>Every time job changes a state (defined <a href="../panda job state page">here</a> ) one row is added to <strong>ATLAS_PANDA.JOBS_STATUSLOG</strong> table with the new state and timestamp.
+<p>Every time job changes a state (defined <a href="https://twiki.cern.ch/twiki/bin/view/PanDA/PandaShiftGuide#Job_state_definitions_in_Panda">here</a> ) one row is added to <strong>ATLAS_PANDA.JOBS_STATUSLOG</strong> table with the new state and timestamp.
 This information is collected by a sqoop script, and saved in hdfs. Another pig script will read it from there, calculate time job spent in any of the states and add these times to jobs archive UC Elasticsearch indices. Variables are:</p>
 <h2 id="tasks">Tasks</h2>
-<p><strong>ATLAS_PANDA.JEDI_TASKS</strong></p>
+<p>Tasks data are imported once per hour from <strong>ATLAS_PANDA.JEDI_TASKS</strong> Oracle table. </p>
 <h3 id="enrichments_1">Enrichments</h3>
-<p>Adding output formats.
-<strong>ATLAS_DEFT.T_PRODUCTION_TASK</strong></p></div>
+<h4 id="output-formats">Output formats</h4>
+<p>In order to understand what are perfromance characheristics of different derivation productions we need to addi output formats to the tasks. K8s cron job runs sqoop to get data from <strong>ATLAS_DEFT.T_PRODUCTION_TASK</strong> and updates task table.</p></div>
         </div>
 
         <footer class="col-md-12">

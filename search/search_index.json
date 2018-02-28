@@ -82,7 +82,7 @@
         },
         {
             "location": "/data-sources/Distributed_processing/",
-            "text": "Distributed processing\n\n\nAll the code collecting and analyzing these datasets is in github repository: \nATLAS-Analytics/DistributedProcessing\n. \n\n\nJobs\n\n\nJobs data are imported from OracleDB table \nATLAS_PANDA.JOBSARCHIVED4\n once per hour. First data is sqooped to hdfs, then preprocessed and sent to UC Elasticsearch index.  \n\n\nEnrichments\n\n\nParent-child relationship\n\n\nWhen a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDB table \nATLAS_PANDA.JEDI_JOB_RETRY_HISTORY\n. A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.\n\n\nJob status\n\n\nEvery time job changes a state (defined \nhere\n ) one row is added to \nATLAS_PANDA.JOBS_STATUSLOG\n table with the new state and timestamp.\nThis information is collected by a sqoop script, and saved in hdfs. Another pig script will read it from there, calculate time job spent in any of the states and add these times to jobs archive UC Elasticsearch indices. Variables are:\n\n\nTasks\n\n\nATLAS_PANDA.JEDI_TASKS\n\n\nEnrichments\n\n\nAdding output formats.\n\nATLAS_DEFT.T_PRODUCTION_TASK",
+            "text": "Distributed processing\n\n\nAll the code collecting and analyzing these datasets is in github repository: \nATLAS-Analytics/DistributedProcessing\n. \n\n\nJobs\n\n\nJobs data are imported from OracleDB table \nATLAS_PANDA.JOBSARCHIVED4\n once per hour. First data is sqooped to hdfs, then preprocessed and sent to UC Elasticsearch index.  \n\n\nEnrichments\n\n\nParent-child relationship\n\n\nWhen a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDB table \nATLAS_PANDA.JEDI_JOB_RETRY_HISTORY\n. A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.\n\nAt the moment code doing indexing is \nhere\n.\n\n\nJob status\n\n\nEvery time job changes a state (defined \nhere\n ) one row is added to \nATLAS_PANDA.JOBS_STATUSLOG\n table with the new state and timestamp.\nThis information is collected by a sqoop script, and saved in hdfs. Another pig script will read it from there, calculate time job spent in any of the states and add these times to jobs archive UC Elasticsearch indices. Variables are:\n\n\nTasks\n\n\nTasks data are imported once per hour from \nATLAS_PANDA.JEDI_TASKS\n Oracle table. \n\n\nEnrichments\n\n\nOutput formats\n\n\nIn order to understand what are perfromance characheristics of different derivation productions we need to addi output formats to the tasks. K8s cron job runs sqoop to get data from \nATLAS_DEFT.T_PRODUCTION_TASK\n and updates task table.",
             "title": "Distributed Processing"
         },
         {
@@ -102,7 +102,7 @@
         },
         {
             "location": "/data-sources/Distributed_processing/#parent-child-relationship",
-            "text": "When a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDB table  ATLAS_PANDA.JEDI_JOB_RETRY_HISTORY . A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.",
+            "text": "When a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDB table  ATLAS_PANDA.JEDI_JOB_RETRY_HISTORY . A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC. At the moment code doing indexing is  here .",
             "title": "Parent-child relationship"
         },
         {
@@ -112,13 +112,18 @@
         },
         {
             "location": "/data-sources/Distributed_processing/#tasks",
-            "text": "ATLAS_PANDA.JEDI_TASKS",
+            "text": "Tasks data are imported once per hour from  ATLAS_PANDA.JEDI_TASKS  Oracle table.",
             "title": "Tasks"
         },
         {
             "location": "/data-sources/Distributed_processing/#enrichments_1",
-            "text": "Adding output formats. ATLAS_DEFT.T_PRODUCTION_TASK",
+            "text": "",
             "title": "Enrichments"
+        },
+        {
+            "location": "/data-sources/Distributed_processing/#output-formats",
+            "text": "In order to understand what are perfromance characheristics of different derivation productions we need to addi output formats to the tasks. K8s cron job runs sqoop to get data from  ATLAS_DEFT.T_PRODUCTION_TASK  and updates task table.",
+            "title": "Output formats"
         },
         {
             "location": "/data-sources/fts/",
@@ -237,7 +242,7 @@
         },
         {
             "location": "/infrastructure/computing_nodes/",
-            "text": "Old infrastructure\n\n\nNodes\n\n\naianalytics nodes\n\n\nOpenStack environment variables set for Project = 'ATLAS Services Analytics'\n\n\n\n\n\n\n\n\nNode\n\n\nLocation\n\n\n\n\n\n\n\n\n\n\naianalytics01\n\n\ncern-geneva-b\n\n\n\n\n\n\naianalytics03\n\n\ncern-geneva-b\n\n\n\n\n\n\naianalytics10\n\n\ncern-geneva-a\n\n\n\n\n\n\naianalytics12\n\n\ncern-wigner-a\n\n\n\n\n\n\naianalytics13\n\n\ncern-wigner-a\n\n\n\n\n\n\naianalytics14\n\n\ncern-geneva-c\n\n\n\n\n\n\naianalytics15\n\n\ncern-geneva-c\n\n\n\n\n\n\naianalytics16\n\n\ncern-geneva-a\n\n\n\n\n\n\n\n\naiatlas013 | cern-wigner-b \naiatlas025 | cern-wigner-b \n\n\n\n\naiatlas114.cern.ch\n\n\n\n\nAccounts\n\n\nadcmusr3 is a fax monitoring account running things on aiatlas114.cern.ch\n  aflume - service account \n\n\nNew infrastructure\n\n\nNodes\n\n\nAccounts\n\n\n\n\n\n\n\n\nName\n\n\nLogin\n\n\nEmail\n\n\n\n\n\n\n\n\n\n\nATLAS analytics service\n\n\nanalyticssvc\n\n\nanalytics.service@cern.ch\n\n\n\n\n\n\nATLAS analytics\n\n\nanalytics\n\n\natlas.analytics@cern.ch",
+            "text": "Old infrastructure\n\n\nNodes\n\n\naianalytics nodes\n\n\nOpenStack environment variables set for Project = 'ATLAS Services Analytics'\n\n\n\n\n\n\n\n\nNode\n\n\nLocation\n\n\n\n\n\n\n\n\n\n\naianalytics01\n\n\ncern-geneva-b\n\n\n\n\n\n\naianalytics03\n\n\ncern-geneva-b\n\n\n\n\n\n\naianalytics10\n\n\ncern-geneva-a\n\n\n\n\n\n\naianalytics12\n\n\ncern-wigner-a\n\n\n\n\n\n\naianalytics13\n\n\ncern-wigner-a\n\n\n\n\n\n\naianalytics14\n\n\ncern-geneva-c\n\n\n\n\n\n\naianalytics15\n\n\ncern-geneva-c\n\n\n\n\n\n\naianalytics16\n\n\ncern-geneva-a\n\n\n\n\n\n\n\n\naiatlas013 | cern-wigner-b \naiatlas025 | cern-wigner-b \n\n\n\n\naiatlas114.cern.ch\n\n\n\n\nAccounts\n\n\nadcmusr3 is a fax monitoring account running things on aiatlas114.cern.ch\n  aflume - service account \n\n\nNew infrastructure\n\n\nThe new infrastructure is based on OpenStack project \"ATLAS AnalyticsSvc\". It has five m2.medium nodes.\n\n\nKubernetes cluster\n\n\nAll the nodes are under \"analytics\" kubernetes cluster based on kubernetes-preview template. One node is a master and 4 nodes are minions. \nThe cluster is monitored using Heapster which sends data to ES at UC. Dashboard showing its data is \nhere\n. \n\n\nUsing your private kubernetes cluster for analytics\n\n\nWhile there is not much documentation the procedure is straightforward. Here the basics:\n\n\n\n\nGetting your OpenStack resources\nhttps://openstack.cern.ch/\n\n\nSeting up kubernetes cluster\n\n\nInstalling kubectl and basic commands\n\n\nUsing Analytics container \n\n\n\n\nAccounts\n\n\n\n\n\n\n\n\nName\n\n\nLogin\n\n\nEmail\n\n\n\n\n\n\n\n\n\n\nATLAS analytics service\n\n\nanalyticssvc\n\n\nanalytics.service@cern.ch\n\n\n\n\n\n\nATLAS analytics\n\n\nanalytics\n\n\natlas.analytics@cern.ch\n\n\n\n\n\n\n\n\nSERVICES\n\n\nTo be moved from the old infrastructure\n\n FTS - old one to be removed (acrontab)\n\n PerfSONAR - old ones running on aianalytics10.\n\n\nAlready running on new infrastructure:\n\n BOINC, BOINC-dev\n\n Job, Task, Enrichment collectors\n\n FTS\n\n DDM accounting\n* xAOD",
             "title": "Backend nodes "
         },
         {
@@ -262,18 +267,28 @@
         },
         {
             "location": "/infrastructure/computing_nodes/#new-infrastructure",
-            "text": "",
+            "text": "The new infrastructure is based on OpenStack project \"ATLAS AnalyticsSvc\". It has five m2.medium nodes.",
             "title": "New infrastructure"
         },
         {
-            "location": "/infrastructure/computing_nodes/#nodes_1",
-            "text": "",
-            "title": "Nodes"
+            "location": "/infrastructure/computing_nodes/#kubernetes-cluster",
+            "text": "All the nodes are under \"analytics\" kubernetes cluster based on kubernetes-preview template. One node is a master and 4 nodes are minions. \nThe cluster is monitored using Heapster which sends data to ES at UC. Dashboard showing its data is  here .",
+            "title": "Kubernetes cluster"
+        },
+        {
+            "location": "/infrastructure/computing_nodes/#using-your-private-kubernetes-cluster-for-analytics",
+            "text": "While there is not much documentation the procedure is straightforward. Here the basics:   Getting your OpenStack resources\nhttps://openstack.cern.ch/  Seting up kubernetes cluster  Installing kubectl and basic commands  Using Analytics container",
+            "title": "Using your private kubernetes cluster for analytics"
         },
         {
             "location": "/infrastructure/computing_nodes/#accounts_1",
             "text": "Name  Login  Email      ATLAS analytics service  analyticssvc  analytics.service@cern.ch    ATLAS analytics  analytics  atlas.analytics@cern.ch",
             "title": "Accounts"
+        },
+        {
+            "location": "/infrastructure/computing_nodes/#services",
+            "text": "To be moved from the old infrastructure  FTS - old one to be removed (acrontab)  PerfSONAR - old ones running on aianalytics10.  Already running on new infrastructure:  BOINC, BOINC-dev  Job, Task, Enrichment collectors  FTS  DDM accounting\n* xAOD",
+            "title": "SERVICES"
         },
         {
             "location": "/infrastructure/analytics/",
@@ -332,18 +347,53 @@
         },
         {
             "location": "/alarms_and_alerts/",
-            "text": "Alarms & Alerts\n\n\nWe are periodically running a number of different checks. When these checks fail we generate an \nAlarm\n. When a person gets an e-mail concerning an alarm, we call that an \nAlert\n. \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu). \n\n\nNetwork issues",
+            "text": "Alarms & Alerts\n\n\nWe are periodically running a number of different checks. When these checks fail we generate an \nAlarm\n. When a person gets an e-mail concerning an alarm, we call that an \nAlert\n. \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu). \nSystem is described \nhere\n.\nTo subscribe to alerts use this \nlink\n. Each mail you recieve will contain a link that one can use to change mailing preferences.\n\n\nNetwork issues\n\n\nToo large packet loss to multiple sites\n\n\nData collection issues\n\n\nPerfSONAR\n\n\nJobs and Tasks\n\n\nFrontier & Squid issues\n\n\nUser caused issues\n\n\nElasticsearch issues",
             "title": "Alarms and Alerts"
         },
         {
             "location": "/alarms_and_alerts/#alarms-alerts",
-            "text": "We are periodically running a number of different checks. When these checks fail we generate an  Alarm . When a person gets an e-mail concerning an alarm, we call that an  Alert . \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu).",
+            "text": "We are periodically running a number of different checks. When these checks fail we generate an  Alarm . When a person gets an e-mail concerning an alarm, we call that an  Alert . \nAt the moment tests are running as cron jobs on our main analytics node (uct3-lx2.uchicago.edu). \nSystem is described  here .\nTo subscribe to alerts use this  link . Each mail you recieve will contain a link that one can use to change mailing preferences.",
             "title": "Alarms &amp; Alerts"
         },
         {
             "location": "/alarms_and_alerts/#network-issues",
             "text": "",
             "title": "Network issues"
+        },
+        {
+            "location": "/alarms_and_alerts/#too-large-packet-loss-to-multiple-sites",
+            "text": "",
+            "title": "Too large packet loss to multiple sites"
+        },
+        {
+            "location": "/alarms_and_alerts/#data-collection-issues",
+            "text": "",
+            "title": "Data collection issues"
+        },
+        {
+            "location": "/alarms_and_alerts/#perfsonar",
+            "text": "",
+            "title": "PerfSONAR"
+        },
+        {
+            "location": "/alarms_and_alerts/#jobs-and-tasks",
+            "text": "",
+            "title": "Jobs and Tasks"
+        },
+        {
+            "location": "/alarms_and_alerts/#frontier-squid-issues",
+            "text": "",
+            "title": "Frontier &amp; Squid issues"
+        },
+        {
+            "location": "/alarms_and_alerts/#user-caused-issues",
+            "text": "",
+            "title": "User caused issues"
+        },
+        {
+            "location": "/alarms_and_alerts/#elasticsearch-issues",
+            "text": "",
+            "title": "Elasticsearch issues"
         },
         {
             "location": "/user-guide/es_and_kibana/",
