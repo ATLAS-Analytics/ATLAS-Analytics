@@ -82,17 +82,17 @@
         },
         {
             "location": "/data-sources/Distributed_processing/",
-            "text": "Distributed processing\n\n\nJobs\n\n\nEnrichments\n\n\nParent-child relationship\n\n\nWhen a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDN table \nthis\n. A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.\n\n\nJob status\n\n\nEvery time job changes a state (defined \nhere\n ) one row is added to panda_job_status table with the new state and timestamp.\nThis information is collected by a sqoop script, and saved in hdfs. Another pig script will read it from there, calculate time job spent in any of the states and add these times to jobs archive UC Elasticsearch indices. Variables are:\n\n\nTasks\n\n\nEnrichments",
+            "text": "Distributed processing\n\n\nAll the code collecting and analyzing these datasets is in github repository: \nATLAS-Analytics/DistributedProcessing\n. \n\n\nJobs\n\n\nJobs data are imported from OracleDB table \nATLAS_PANDA.JOBSARCHIVED4\n once per hour. First data is sqooped to hdfs, then preprocessed and sent to UC Elasticsearch index.  \n\n\nEnrichments\n\n\nParent-child relationship\n\n\nWhen a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDB table \nATLAS_PANDA.JEDI_JOB_RETRY_HISTORY\n. A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.\n\n\nJob status\n\n\nEvery time job changes a state (defined \nhere\n ) one row is added to \nATLAS_PANDA.JOBS_STATUSLOG\n table with the new state and timestamp.\nThis information is collected by a sqoop script, and saved in hdfs. Another pig script will read it from there, calculate time job spent in any of the states and add these times to jobs archive UC Elasticsearch indices. Variables are:\n\n\nTasks\n\n\nATLAS_PANDA.JEDI_TASKS\n\n\nEnrichments\n\n\nAdding output formats.\n\nATLAS_DEFT.T_PRODUCTION_TASK",
             "title": "Distributed Processing"
         },
         {
             "location": "/data-sources/Distributed_processing/#distributed-processing",
-            "text": "",
+            "text": "All the code collecting and analyzing these datasets is in github repository:  ATLAS-Analytics/DistributedProcessing .",
             "title": "Distributed processing"
         },
         {
             "location": "/data-sources/Distributed_processing/#jobs",
-            "text": "",
+            "text": "Jobs data are imported from OracleDB table  ATLAS_PANDA.JOBSARCHIVED4  once per hour. First data is sqooped to hdfs, then preprocessed and sent to UC Elasticsearch index.",
             "title": "Jobs"
         },
         {
@@ -102,22 +102,22 @@
         },
         {
             "location": "/data-sources/Distributed_processing/#parent-child-relationship",
-            "text": "When a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDN table  this . A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.",
+            "text": "When a job needs to be restarted for whatever reason, it gets a new pandaID. It can actually be restarted at more than one place. Information on parent/child relationship between jobs is stored in OracleDB table  ATLAS_PANDA.JEDI_JOB_RETRY_HISTORY . A sqoop job gets this info to HDFS from where a pyton codes reads it and uses it to update values in ES at UC.",
             "title": "Parent-child relationship"
         },
         {
             "location": "/data-sources/Distributed_processing/#job-status",
-            "text": "Every time job changes a state (defined  here  ) one row is added to panda_job_status table with the new state and timestamp.\nThis information is collected by a sqoop script, and saved in hdfs. Another pig script will read it from there, calculate time job spent in any of the states and add these times to jobs archive UC Elasticsearch indices. Variables are:",
+            "text": "Every time job changes a state (defined  here  ) one row is added to  ATLAS_PANDA.JOBS_STATUSLOG  table with the new state and timestamp.\nThis information is collected by a sqoop script, and saved in hdfs. Another pig script will read it from there, calculate time job spent in any of the states and add these times to jobs archive UC Elasticsearch indices. Variables are:",
             "title": "Job status"
         },
         {
             "location": "/data-sources/Distributed_processing/#tasks",
-            "text": "",
+            "text": "ATLAS_PANDA.JEDI_TASKS",
             "title": "Tasks"
         },
         {
             "location": "/data-sources/Distributed_processing/#enrichments_1",
-            "text": "",
+            "text": "Adding output formats. ATLAS_DEFT.T_PRODUCTION_TASK",
             "title": "Enrichments"
         },
         {
