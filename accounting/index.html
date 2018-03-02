@@ -101,6 +101,10 @@
 <li >
     <a href="../data-sources/esnet/">ESnet</a>
 </li>
+            
+<li >
+    <a href="../data-sources/DDM/">DDM</a>
+</li>
     </ul>
   </li>
                             
@@ -109,7 +113,7 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../infrastructure/computing_nodes/">Backend nodes </a>
+    <a href="../infrastructure/computing_nodes/">Backend nodes</a>
 </li>
             
 <li >
@@ -195,13 +199,24 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#accounting">Accounting</a></li>
-            <li><a href="#clouds">Clouds</a></li>
+            <li><a href="#jobs">Jobs</a></li>
+            <li><a href="#cpu">CPU</a></li>
+            <li><a href="#network">Network</a></li>
+            <li><a href="#storage">Storage</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="accounting">Accounting</h1>
-<h2 id="clouds">Clouds</h2></div>
+<h2 id="jobs">Jobs</h2>
+<h2 id="cpu">CPU</h2>
+<h2 id="network">Network</h2>
+<h2 id="storage">Storage</h2>
+<p>Rucio make daily dumps of their main DB table containing all the datasets at all sites.  This data is in HDFS and is indexed at ES at UChicago. The raw data is kept for x days, while aggregated data is kept indefinitely. It must be kept in mind that the raw data repeats from day to day so while making time averages is OK, making sums over more than one day have no sense. 
+ Most important metrices are shown in this <a href="">dashboard</a>. 
+  * Total storage per site in time
+  * Percentage of storage in space tokens per site. Percentage of storage in space tokens in time.
+  * Space occupied by different data formats, different tags.</p></div>
         </div>
 
         <footer class="col-md-12">

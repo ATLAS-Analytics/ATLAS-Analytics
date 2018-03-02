@@ -101,6 +101,10 @@
 <li >
     <a href="../data-sources/esnet/">ESnet</a>
 </li>
+            
+<li >
+    <a href="../data-sources/DDM/">DDM</a>
+</li>
     </ul>
   </li>
                             
@@ -109,7 +113,7 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../infrastructure/computing_nodes/">Backend nodes </a>
+    <a href="../infrastructure/computing_nodes/">Backend nodes</a>
 </li>
             
 <li >
@@ -195,16 +199,25 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#site-administration">Site administration</a></li>
-            <li><a href="#storage">Storage</a></li>
-            <li><a href="#jobs-io">Jobs IO</a></li>
             <li><a href="#jobs">Jobs</a></li>
+            <li><a href="#jobs-io">Jobs IO</a></li>
             <li><a href="#wide-area-network-issues">Wide Area Network issues</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="site-administration">Site administration</h1>
-<h2 id="storage">Storage</h2>
+<h2 id="jobs">Jobs</h2>
+<p>There are around 100 different metrics we collect on all jobs. There are thousands of ways to filter and visualize them but for site admins we prepared one <a href="">dashboard</a> with the most important information:</p>
+<ul>
+<li>number of jobs in time, split by status. Look for total number of jobs, a lot of failed, canceled jobs</li>
+<li>fraction of different kinds of jobs (production, analysis, ...). This is important to know as they exhibit different stresses on the site, have different efficiencies, IO requirements.</li>
+<li>wall time delivered, cpu efficiency</li>
+<li>number of errors per node. Nodes with high percentage of failed jobs may need to be taken offline and cause investigated. </li>
+</ul>
+<p>Keep in mind that this dashboard contains only information on finished jobs. For not yet finished jobs one need to look <a href="">here</a>.
+To make it show only information from one sites add a line like this to the search bar: <code>sitnamee:MWT2</code>.
+We suggest to try grouping nodes (based on CPU, storage, or network connectivity) and compare their performance.</p>
 <h2 id="jobs-io">Jobs IO</h2>
 <p>Site movers collect information on all the input/output data transfers from the job. This data gets collected and indexed in ES at both CERN and UChicago. The data contains information on all the files that job accessesed or wrote, file sizes, rates, and a lot of metadata (filenames,workernode, etc.). Sites can use this data to:</p>
 <ul>
@@ -214,11 +227,10 @@
 <li>make purchasing decissions (switches, NICs, disks) </li>
 </ul>
 <p>Starting point should be this <a href="http://atlas-kibana.mwt2.org:5601/app/kibana#/dashboard/bc828870-f566-11e7-8f2f-ab6704660c79">Kibana dashboard</a>. To make it show only information from one sites add a line like this to the search bar:
-   <code>sitnamee:MWT2</code>. First one would look at the visualization named <strong>errors</strong>. Nodes with more than a few errors most probably need a deep inspection. 
-   For a deeper investigation we suggest looking separately at WNs connected to the same switch. This is easiest done by making a search like this: <code>sitename:MWT2 and hostname:uct2*</code>. Big difference in performance can point to a problem with a switch WNs are connected to, or link from that switch to the storage. Feel free to make a special visualization that splits all your WNs in groups, save it (please prepend name of your site to names of your visualizations) so you don't have to redo it every day. You can also save a copy of the dashboard and customize it to your liking. </p>
-<h2 id="jobs">Jobs</h2>
+   <code>sitnamee:MWT2</code>. First one would look at the visualization named <strong>errors</strong>. Nodes with more than a few errors most probably need a deep inspection. </p>
+<p>For a deeper investigation we suggest looking separately at WNs connected to the same switch. This is easiest done by making a search like this: <code>sitename:MWT2 and hostname:uct2*</code>. Big difference in performance can point to a problem with a switch WNs are connected to, or link from that switch to the storage. Feel free to make a special visualization that splits all your WNs in groups, save it (please prepend name of your site to names of your visualizations) so you don't have to redo it every day. You can also save a copy of the dashboard and customize it to your liking. </p>
 <h2 id="wide-area-network-issues">Wide Area Network issues</h2>
-<p>It si very important to quickly spot WAN connectivity issues. There are two easy ways to do it: </p>
+<p>It is very important to quickly spot WAN connectivity issues. There are two easy ways to do it: </p>
 <ul>
 <li>Subscribe to an alert on network issues for your site. This check is described <a href="../alarms_and_alerts/#network-issues">HERE</a> and will alert you to low level problems (broken or saturated link, high packet loss, unstable path)</li>
 <li>Look at the FTS queues for your site. Long queues can point to bad settings in your FTS server, unusual Rucio requests, etc. Starting point for this kind of investigation is the <a href="">FTS queues</a> kibana page. Simply search for all transfers where your site is a source and then where your site is a destination (eg. <code>src_site:MWT2</code> or <code>dest_site:MWT2</code>). While a few files waiting in a queue for a few hours is not of big concern, a lot of transfers waiting for a long time (agreagate waiting time in years) is of concern.</li>

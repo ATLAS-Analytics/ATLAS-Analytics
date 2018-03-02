@@ -101,6 +101,10 @@
 <li >
     <a href="../esnet/">ESnet</a>
 </li>
+            
+<li >
+    <a href="../DDM/">DDM</a>
+</li>
     </ul>
   </li>
                             
@@ -109,7 +113,7 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../../infrastructure/computing_nodes/">Backend nodes </a>
+    <a href="../../infrastructure/computing_nodes/">Backend nodes</a>
 </li>
             
 <li >
@@ -194,11 +198,24 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#cpu-benchmarks">CPU benchmarks</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-</div>
+<h1 id="cpu-benchmarks">CPU benchmarks</h1>
+<p>For 1% of grid jobs pilot in parallel to fetching input data, runs three different benchmarks. These are:
+ * fastBMK
+ * 
+ * 
+It also collects data on node:</p>
+<ul>
+<li>CPU type</li>
+<li>is it VM</li>
+<li>is it hyperthreaded</li>
+<li></li>
+</ul>
+<p>All the info gets sent to a logstash instance running at uct2-collectd.mwt2.org and from there to ES.</p></div>
         </div>
 
         <footer class="col-md-12">
