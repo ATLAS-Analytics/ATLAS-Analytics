@@ -6,27 +6,28 @@ pages:
     - Accounting: accounting.md
     - Infrastructure:
         - Data sources: 
-            - 'Distributed Processing': data-sources/Distributed_processing.md
-            - FTS: 'data-sources/fts.md'
-            - 'PerfSONAR': 'data-sources/perfsonar.md'
-            - 'xAOD': 'data-sources/xaod.md'
-            - 'Benchmarks': 'data-sources/benchmarks.md'
-            - 'RTT': 'data-sources/rtt.md'
-            - 'ESnet': 'data-sources/esnet.md'
+            - Distributed Processing: data-sources/Distributed_processing.md
+            - FTS: data-sources/fts.md
+            - PerfSONAR: data-sources/perfsonar.md
+            - xAOD: data-sources/xaod.md
+            - Benchmarks: data-sources/benchmarks.md
+            - RTT: data-sources/rtt.md
+            - ESnet: data-sources/esnet.md
+            - DDM: data-sources/DDM.md
         - Computing: 
-            - 'Backend nodes ': 'infrastructure/computing_nodes.md'
-            - 'Analytics': 'infrastructure/analytics.md'
-            - 'AMQ': 'infrastructure/amq.md'
-            - 'Elasticsearch': 'infrastructure/elasticsearch.md'
-            - 'Hadoop': 'infrastructure/hadoop.md'
-            - 'Logstash': 'infrastructure/logstash.md'
-        - Alarms and Alerts: 'alarms_and_alerts.md'
+            - Backend nodes: infrastructure/computing_nodes.md
+            - Analytics: infrastructure/analytics.md
+            - AMQ: infrastructure/amq.md
+            - Elasticsearch: infrastructure/elasticsearch.md
+            - Hadoop: infrastructure/hadoop.md
+            - Logstash: infrastructure/logstash.md
+        - Alarms and Alerts: alarms_and_alerts.md
         - User Guides:
-            - 'Elasticsearch & Kibana': 'user-guide/es_and_kibana.md'
-            - 'Hadoop': 'user-guide/hadoop.md'
-            - 'Spark': 'user-guide/spark.md'
-            - 'Pig Latin': 'user-guide/pig.md'
-            - 'Jupyter': 'user-guide/jupyter.md'
+            - Elasticsearch & Kibana: user-guide/es_and_kibana.md
+            - Hadoop: user-guide/hadoop.md
+            - Spark: user-guide/spark.md
+            - Pig Latin: user-guide/pig.md
+            - Jupyter: user-guide/jupyter.md
             
 repo_url: https://github.com/ATLAS-Analytics/ATLAS-Analytics
 site_author: Ilija Vukotic
