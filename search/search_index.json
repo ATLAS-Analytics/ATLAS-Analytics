@@ -137,7 +137,7 @@
         },
         {
             "location": "/data-sources/fts/",
-            "text": "FTS\n\n\nDOCS\n\n\n\n\nMain google doc\n\n\nFTS3 configuration\n\n\nFTS3 Optimizer\n\n\n\n\nFTS servers\n\n\nConfigurations per FTS Server\n\n\n\n\nCERN\n\n\nBNL\n\n\n\n\nMonitoring @CERN\n\n\nMonit:\n\n\n\n\nGrafana\n\n\nKibana\n\n\n\n\nMonitoring @UC\n\n\nGlobally most important \nFTS queue waits.\n\n\nComparissons of average queue times for transfers where destination is \nUS or not US.\n\n\nSite specific dashboards:\n\n\n\n\nMWT2 \nQueues\n \nTransfers\n\n\nAGLT2 \nQueues\n \nTransfers\n\n\nBNL \nTransfers\n\n\n\n\nMonitoring flow description",
+            "text": "FTS\n\n\nDOCS\n\n\n\n\nMain google doc\n\n\nFTS3 configuration\n\n\nFTS3 Optimizer\n\n\n\n\nFTS servers\n\n\nConfigurations per FTS Server\n\n\n\n\nCERN\n\n\nBNL\n\n\n\n\nMonitoring @CERN\n\n\nMonit:\n\n\n\n\nGrafana\n\n\nKibana\n\n\n\n\nMonitoring @UC\n\n\nIndex pattern is \nfts-2*\n.\n\n\nTo check queue lenghts and average time in queue, check this dashboard:\nhttp://atlas-kibana-dev.mwt2.org/goto/5132d543e93e074899b0b92aa3cf1265\n\n\nTo check number of active transfers per activity type and per link, use index pattern \nlinks_traffic*\n.\n\n\nTo check ingress, egress, numbers of incomming and outcoming transfers per site, use index pattern \nsites_traffic*\n\nand this dashboard: http://atlas-kibana-dev.mwt2.org/goto/608b3f7a29b7b37afdd50a2c62fdd12c\n\n\nOLD DASHBOARDS (until March 2018)\n\n\nGlobally most important \nFTS queue waits.\n\n\nComparissons of average queue times for transfers where destination is \nUS or not US.\n\n\nSite specific dashboards:\n\n\n\n\nMWT2 \nQueues\n \nTransfers\n\n\nAGLT2 \nQueues\n \nTransfers\n\n\nBNL \nTransfers\n\n\n\n\nMonitoring flow description\n\n\nThe new data flow started March 2018. Data is collected from the FTS AMQ and sent directly to ES at UC, so it is almost real-time. All the IDs are stored so results can be crosschecked against both RUCIO and FTS.",
             "title": "FTS"
         },
         {
@@ -162,12 +162,17 @@
         },
         {
             "location": "/data-sources/fts/#monitoring-uc",
-            "text": "Globally most important  FTS queue waits.  Comparissons of average queue times for transfers where destination is  US or not US.  Site specific dashboards:   MWT2  Queues   Transfers  AGLT2  Queues   Transfers  BNL  Transfers",
+            "text": "Index pattern is  fts-2* .  To check queue lenghts and average time in queue, check this dashboard:\nhttp://atlas-kibana-dev.mwt2.org/goto/5132d543e93e074899b0b92aa3cf1265  To check number of active transfers per activity type and per link, use index pattern  links_traffic* .  To check ingress, egress, numbers of incomming and outcoming transfers per site, use index pattern  sites_traffic* \nand this dashboard: http://atlas-kibana-dev.mwt2.org/goto/608b3f7a29b7b37afdd50a2c62fdd12c",
             "title": "Monitoring @UC"
         },
         {
+            "location": "/data-sources/fts/#old-dashboards-until-march-2018",
+            "text": "Globally most important  FTS queue waits.  Comparissons of average queue times for transfers where destination is  US or not US.  Site specific dashboards:   MWT2  Queues   Transfers  AGLT2  Queues   Transfers  BNL  Transfers",
+            "title": "OLD DASHBOARDS (until March 2018)"
+        },
+        {
             "location": "/data-sources/fts/#monitoring-flow-description",
-            "text": "",
+            "text": "The new data flow started March 2018. Data is collected from the FTS AMQ and sent directly to ES at UC, so it is almost real-time. All the IDs are stored so results can be crosschecked against both RUCIO and FTS.",
             "title": "Monitoring flow description"
         },
         {
@@ -237,7 +242,7 @@
         },
         {
             "location": "/data-sources/esnet/",
-            "text": "ESnet\n\n\nData collection\n\n\nThanks to Jon Dugan we can collect data from ESnet \nREST interface\n and send it to ES at UChicago. \nCollector is in \nGitHub repo\n while a docker container is auto-built in dockerHub: \natlasanalyticsservice/esnet\n.\n\n\nData analysis\n\n\nWe still did not start analyzing this data. Once we do, it will be done using tools and services of docker container:        \nopensciencegrid/network_analytics",
+            "text": "ESnet\n\n\nData collection\n\n\nThanks to Jon Dugan we can collect data from ESnet \nREST interface\n and send it to ES at UChicago. \nCollector is in \nGitHub repo\n while a docker container is auto-built in dockerHub: \natlasanalyticsservice/esnet\n.\n\n\nCurrently the collector runs at es-docker.mwt2.org but will be moved to a kubernetes cluster at MWT2 as soon as we have it.\n\n\nData analysis\n\n\nWe still did not start analyzing this data. Once we do, it will be done using tools and services of docker container:        \nopensciencegrid/network_analytics",
             "title": "ESnet"
         },
         {
@@ -247,7 +252,7 @@
         },
         {
             "location": "/data-sources/esnet/#data-collection",
-            "text": "Thanks to Jon Dugan we can collect data from ESnet  REST interface  and send it to ES at UChicago. \nCollector is in  GitHub repo  while a docker container is auto-built in dockerHub:  atlasanalyticsservice/esnet .",
+            "text": "Thanks to Jon Dugan we can collect data from ESnet  REST interface  and send it to ES at UChicago. \nCollector is in  GitHub repo  while a docker container is auto-built in dockerHub:  atlasanalyticsservice/esnet .  Currently the collector runs at es-docker.mwt2.org but will be moved to a kubernetes cluster at MWT2 as soon as we have it.",
             "title": "Data collection"
         },
         {

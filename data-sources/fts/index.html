@@ -228,6 +228,13 @@
 <li><a href="https://monit-kibana.cern.ch/app/kibana#/dashboard/MONIT-FTS-Overview">Kibana</a></li>
 </ul>
 <h2 id="monitoring-uc">Monitoring @UC</h2>
+<p>Index pattern is <strong>fts-2*</strong>.</p>
+<p>To check queue lenghts and average time in queue, check this dashboard:
+http://atlas-kibana-dev.mwt2.org/goto/5132d543e93e074899b0b92aa3cf1265</p>
+<p>To check number of active transfers per activity type and per link, use index pattern <strong>links_traffic*</strong>.</p>
+<p>To check ingress, egress, numbers of incomming and outcoming transfers per site, use index pattern <strong>sites_traffic*</strong>
+and this dashboard: http://atlas-kibana-dev.mwt2.org/goto/608b3f7a29b7b37afdd50a2c62fdd12c</p>
+<h3 id="old-dashboards-until-march-2018">OLD DASHBOARDS (until March 2018)</h3>
 <p>Globally most important <a href="http://atlas-kibana-dev.mwt2.org/goto/8baa7456232e317ee90c1030baecf564">FTS queue waits.</a></p>
 <p>Comparissons of average queue times for transfers where destination is <a href="http://atlas-kibana-dev.mwt2.org/goto/4ba2c38aad412e631694d388b87420d0">US or not US.</a></p>
 <p>Site specific dashboards:</p>
@@ -236,7 +243,8 @@
 <li>AGLT2 <a href="http://atlas-kibana-dev.mwt2.org/goto/0478f5c220732a22efc205cc1da18662">Queues</a> <a href="http://atlas-kibana-dev.mwt2.org/goto/1c7102866827129751f8bc0c99cbff36">Transfers</a></li>
 <li>BNL <a href="http://atlas-kibana-dev.mwt2.org/goto/506a4177304f267bf704508cfdb1acfa">Transfers</a></li>
 </ul>
-<h2 id="monitoring-flow-description">Monitoring flow description</h2></div>
+<h2 id="monitoring-flow-description">Monitoring flow description</h2>
+<p>The new data flow started March 2018. Data is collected from the FTS AMQ and sent directly to ES at UC, so it is almost real-time. All the IDs are stored so results can be crosschecked against both RUCIO and FTS.</p></div>
         </div>
 
         <footer class="col-md-12">
