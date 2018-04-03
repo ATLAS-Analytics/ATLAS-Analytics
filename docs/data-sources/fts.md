@@ -21,6 +21,19 @@ Monit:
 
 ## Monitoring @UC
 
+Index pattern is __fts-2*__.
+
+To check queue lenghts and average time in queue, check this dashboard:
+http://atlas-kibana-dev.mwt2.org/goto/5132d543e93e074899b0b92aa3cf1265
+
+To check number of active transfers per activity type and per link, use index pattern __links_traffic*__.
+
+
+To check ingress, egress, numbers of incomming and outcoming transfers per site, use index pattern __sites_traffic*__
+and this dashboard: http://atlas-kibana-dev.mwt2.org/goto/608b3f7a29b7b37afdd50a2c62fdd12c
+
+
+### OLD DASHBOARDS (until March 2018)
 Globally most important [FTS queue waits.](http://atlas-kibana-dev.mwt2.org/goto/8baa7456232e317ee90c1030baecf564)
 
 Comparissons of average queue times for transfers where destination is [US or not US.](http://atlas-kibana-dev.mwt2.org/goto/4ba2c38aad412e631694d388b87420d0)
@@ -34,3 +47,4 @@ Site specific dashboards:
 
 ## Monitoring flow description
 
+The new data flow started March 2018. Data is collected from the FTS AMQ and sent directly to ES at UC, so it is almost real-time. All the IDs are stored so results can be crosschecked against both RUCIO and FTS.
