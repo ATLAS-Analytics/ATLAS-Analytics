@@ -1,10 +1,10 @@
 ### Distributed processing
 
-All the code collecting and analyzing these datasets is in github repository: [ATLAS-Analytics/DistributedProcessing](https://github.com/ATLAS-Analytics/DistributedProcessing). 
+All the code collecting and analyzing these datasets is in github repository: [ATLAS-Analytics/WFMS](https://github.com/ATLAS-Analytics/WFMS). 
 
 ## Jobs
 
-Jobs data are imported from OracleDB table __ATLAS_PANDA.JOBSARCHIVED4__ once per hour. First data is sqooped to hdfs, then preprocessed and sent to UC Elasticsearch index.  
+Jobs data are imported from OracleDB table __ATLAS_PANDA.JOBSARCHIVED4__ once per hour. This is a pyhton code that sends data to UC Elasticsearch index.  
 
 ### Enrichments
 
@@ -18,7 +18,7 @@ This information is collected by a sqoop script, and saved in hdfs. Another pig 
 
 
 ## Tasks
-Tasks data are imported once per hour from __ATLAS_PANDA.JEDI_TASKS__ Oracle table. 
+Tasks data are imported once per hour from __ATLAS_PANDA.JEDI_TASKS__ Oracle table. Again python code.
 
 ### Enrichments
 

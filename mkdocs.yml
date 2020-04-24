@@ -6,7 +6,7 @@ pages:
     - Accounting: accounting.md
     - Infrastructure:
         - Data sources: 
-            - Distributed Processing: data-sources/Distributed_processing.md
+            - WFMS: data-sources/WFMS.md
             - FTS: data-sources/fts.md
             - PerfSONAR: data-sources/perfsonar.md
             - xAOD: data-sources/xaod.md
